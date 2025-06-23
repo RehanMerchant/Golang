@@ -7,7 +7,7 @@ Roadmap for Go
 **Go Beginner**
 
 - [x]  **Learn the Basics**
-    - [x]  [Variables and Declaration](https://github.com/baselrabia/Golang-Roadmap)
+    - [x]  [Variables and Declaration](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/Learn%20the%20Basics/01.Variable%20and%20Declaration)
     - [x]  Data Types
     - [x]  Loops and Range
     - [x]  If, Switch statements
