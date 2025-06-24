@@ -1,5 +1,7 @@
 # Introduction to Go
 
+![Go_gif](https://miro.medium.com/v2/resize:fit:1400/0*NCKH5j7mncvMVBcR.gif)
+
 Go, also known as golang is a   open-source programming language devloped by **Google**. Designed for its  simplicity, efficiency, and reliability.It has the ability to perform simple and fast like c and security benifits of c++ and ease of use of language.
 
 ### The Origin Story
@@ -18,7 +20,7 @@ The design began in September 2007 as a 20% project at Google. As things progres
 
 The devlopers of go have few things in their mind while making go, that shaped the future of go
 
-**Simplicity**
+**Simplicity** 
 
 First and foremost, a simple language with clean, concise syntax was the target. A lightweight type system, with no type hierarchy.
 
@@ -61,7 +63,7 @@ Go is being used in many industries due to all of its feature.
 ![Go_Industry_Use](https://blog.jetbrains.com/wp-content/uploads/2021/02/5-2x.png)
 *Image Source: Image found via [Jetbrains blog](https://blog.jetbrains.com/go/2021/02/03/the-state-of-go/). All rights belong to the original creator.*
 
-They key features because of which go is so popular are as follows
+They key features because of which go is so popular and used by top companies for their production applications and products are as follows:
 
 - Small and simple core language. Go feels similar in size to C, with a very readable language spec that’s only about 50 pages long. This makes it easy to learn or teach to others.
 - High quality standard library, especially for servers and network tasks.
@@ -74,3 +76,15 @@ They key features because of which go is so popular are as follows
 
 Go provide with a Wonderful standard library, that is extensive, cross-platform, and well documented. Go comes with “batteries included”, so you can build useful servers and CLI tools right away, without any third party dependencies.
 
+### Installing and Setting up
+
+You can head over to https://go.dev/doc/install, you can find proper download and install guide for your respective operating system.
+
+ **Environment Variable**
+ 
+ Before go version 1.11, go was supposed to setup in a particular manner very specific. Earlier there were no modules/package system in go. It was adviced to create a folder called **GOPATH**
+ (you can name it anything), but that folder contain three sub folder called `bin` `pkg` `src` Each folder has a particual purpose, the src folder contans all raw go source code organized by import path, it also contain all the downladed packages also.
+The pkg  folder stores `.a` files (Go package archives), generallly used to speed up the compilation and the bin folder store the binary executable of the raw files from the src folder.
+
+As of **Go 1.11+**, Go used Module system which dont require GOPATH. Your project structure can be anywhere on your machine.
+We will discuss it in more depth further.

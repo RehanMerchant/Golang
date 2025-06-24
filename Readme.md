@@ -8,16 +8,14 @@ Roadmap for Go
     - [x]  [The Origin Story](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/01.Introduction%20to%20Go#the-origin-story)
     - [x]  [Design Goals](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/01.Introduction%20to%20Go#design-goals)
     - [x]  [Why Go](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/01.Introduction%20to%20Go#why-go)
-    - [ ]  Installing Go and Setting up
-    - [ ]  Example Programs
-    - [ ]  Running, Building and Formatting
-- [ ]  Basic Syntax
+    - [x]  Installing Go and Setting up
+- [ ]  Basic Syntax 
     - [ ]  Packages and Import
     - [ ]  Variables and Constance
     - [ ]  Data Types
     - [ ]  Type Inference and Casting
 - [ ]  Control Flow
-      - [ ]  If/Else
+    - [ ]  If/Else
     - [ ]  Loops
     - [ ]  Switch Statements
     - [ ]  Defer, Panic, Recover
