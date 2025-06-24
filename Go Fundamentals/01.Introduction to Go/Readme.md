@@ -25,15 +25,21 @@ First and foremost, a simple language with clean, concise syntax was the target.
 
 **Scale**
 
-Support for large scale programming was one of the main objectives.
+Support for large scale programming was one of the main objectives. This had two aspects:
+
+System scale: Greater support for concurrency was a must have and an efficient process level communication mechanism was desired along with speed of compilation.
+
+Engineering scale: The objective was to develop a language for large codebases that are written and maintained by big teams.
 
 **Safety**
 
-Type safety and Memory safety was the foremost important features that is there in go which prevents production faliure and memory issues.
+Type safety: Nobody likes type issues to pop up at runtime in Production environment. So, being type-safe was important.
+
+Memory safety: Nobody likes memory issues either. So, the ability to handle memory in a safe way mattered too.
 
 **Better run-time**
 
-A run-time environment with efficient, latency-free garbage collection was the target.
+A run-time environment with efficient, latency-free garbage collection was the target. In addition to that, they wanted to have built-in strings, maps and, communication channels for intra-thread communication.
 
 **Better Package model**
 
@@ -41,6 +47,9 @@ A good package model goes a long way in keeping the code base maintainable. Expl
 
 
 ### Why Go?
+
+[Jetbrains Blog](https://blog.jetbrains.com/go/2021/02/03/the-state-of-go/) &
+[Features Blog](https://benhoyt.com/writings/go-intro/)
 
 As we discussed above the the goals of the language, which strongly suggest that the language is well designed. 
 
@@ -64,5 +73,4 @@ They key features because of which go is so popular are as follows
 - Heavily used in cloud tools. Docker and Kubernetes are written in Go, and Dropbox, Digital Ocean, Cloudflare, and many other companies use it extensively.
 
 Go provide with a Wonderful standard library, that is extensive, cross-platform, and well documented. Go comes with “batteries included”, so you can build useful servers and CLI tools right away, without any third party dependencies.
-
 

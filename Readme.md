@@ -5,8 +5,10 @@ Roadmap for Go
 ## Go Fundamentals
 
 - [ ]  [Introduction to Go](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/01.Introduction%20to%20Go#introduction-to-go)
-    - [ ]  What is Go? Why use it
-    - [ ]  Installing Go and Setting up GOPATH and GOROOT
+    - [x]  [The Origin Story]()
+    - [x]  [Design Goals]()
+    - [x]  [Why Go]()
+    - [ ]  Installing Go and Setting up
     - [ ]  Example Programs
     - [ ]  Running, Building and Formatting
 - [ ]  Basic Syntax 
