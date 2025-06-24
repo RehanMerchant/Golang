@@ -2,3 +2,92 @@
 
 Roadmap for Go 
 
+## Go Fundamentals
+
+- [ ]  [Introduction to Go]()
+    - [ ]  What is Go? Why use it
+    - [ ]  Installing Go and Setting up GOPATH and GOROOT
+    - [ ]  E ample Programs
+    - [ ]  Running, Building and Formatting
+- [ ]  Basic Syntax 
+    - [ ]  Packages and Import
+    - [ ]  Variables and Constance
+    - [ ]  Data Types
+    - [ ]  Type Inference and Casting
+- [ ]  Control Flow
+    - [ ]  If/Else
+    - [ ]  Loops
+    - [ ]  Switch Statements
+    - [ ]  Defer, Panic, Recover
+- [ ]  Functions
+    - [ ]  Declaring and Calling Functions
+    - [ ]  Return Values
+    - [ ]  Recursion
+    - [ ]  Defer, Panic, Recover
+    - [ ]  Anonymous Functions and Closures
+- [ ]  Comple  Types
+    - [ ]  Arrays
+    - [ ]  Slices
+    - [ ]  Maps
+    - [ ]  Structs
+    - [ ]  Anonymous Functions and Closures
+- [ ]  Pointers & Memory
+    - [ ]  Basic Pointer Synta 
+    - [ ]  Pointers to Structs
+    - [ ]  Nil and Zero Values
+    - [ ]  Value vs Reference Types
+- [ ]  Methods & Receivers
+    - [ ]  Method Definition
+    - [ ]  Method on Structs
+    - [ ]  Method promotion
+    - [ ]  Constructor Patterns
+- [ ]  Interfaces
+    - [ ]  Basic Interface Definition
+    - [ ]  Implementing Interfaces implicitly
+    - [ ]   Type Assertions & Type Switches
+    - [ ]   Interface Composition
+    - [ ]   Empty Interface
+- [ ]  Packages and Modules
+    - [ ]  Organizing Code with Packages
+    - [ ]  E ported vs Une ported identifiers
+    - [ ]  Go Modules
+    - [ ]  Import Aliases and Dot Imports
+- [ ]  Error Handling
+    - [ ]  Returning error as a value
+    - [ ]   Custom Error Types
+    - [ ]  Wrapping errors with fmt.Errorf
+    - [ ]  errors.Is, errors.As
+    - [ ]  panic vs error vs recover
+- [ ]  Concurrency
+    - [ ]  Goroutines
+    - [ ]  Channels (unbuffered and buffered)
+    - [ ]   Channel Direction
+    - [ ]  Select Statements
+    - [ ]  WaitGroups
+    - [ ]  Mute  and Race Conditions
+- [ ]  Standard Library (Important Packages)
+    - [ ]  fmt, strings, strconv, time
+    - [ ]  math, math/rand, sort
+    - [ ]  io, io/ioutil, os, bufio
+    - [ ]  net/http (basic requests)
+    - [ ]  encoding/json, encoding/csv, encoding/ ml
+    - [ ]  conte t (important for managing goroutines)
+- [ ]  Testing in Go
+    - [ ]  Writing unit tests using testing package
+    - [ ]  Table-driven tests
+    - [ ]  Benchmarks
+    - [ ]  E ample tests
+    - [ ]  go test, go test -v, code coverage
+- [ ]  Tooling
+    - [ ]  go fmt, go vet
+    - [ ]  golint, staticcheck
+    - [ ]  go doc, go list, go mod
+    - [ ]  delve
+    - [ ] race
+- [ ]  Advanced Topics
+    - [ ] Reflection (reflect package)
+    - [ ] Unsafe operations (via unsafe package)
+    - [ ] Memory layout and escape analysis
+    - [ ] Build constraints / tags
+    - [ ] Generics (Go 1.18+)
+    - [ ] Custom Collection Types (using Generics)
