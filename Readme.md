@@ -9,9 +9,9 @@ Roadmap for Go
     - [x]  [Design Goals](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/01.Introduction%20to%20Go#design-goals)
     - [x]  [Why Go](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/01.Introduction%20to%20Go#why-go)
     - [x]  [Installing Go and Setting up](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/01.Introduction%20to%20Go#installing-and-setting-up)
-- [ ]  Getting Started 
-    - [x]  [Packages and Import]()
-    - [x]  [Data Types]()
+- [ ]  [Getting Started](https://github.com/RehanMerchant/Golang/blob/main/Go%20Fundamentals/02.Basic%20Syntax/Readme.md) 
+    - [x]  [Packages and Import](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/02.Basic%20Syntax#packages-and-imports)
+    - [x]  [Data Types](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/02.Basic%20Syntax#data-types)
     - [ ]  Variables and Constance
 - [ ]  Control Flow
     - [ ]  If/Else
