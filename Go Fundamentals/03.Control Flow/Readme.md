@@ -1,0 +1,226 @@
+# Control Flow
+
+![image](https://static7.depositphotos.com/1194063/684/i/450/depositphotos_6843383-stock-photo-hand-draws-flow-chart-on.jpg)
+
+Control flow is one of the most fundamental aspects of any programming language. It defines the order in which individual statements, instructions, or function calls are executed. Without control flow, a program would simply execute line by line without any logic or decision-making ability.
+
+In Go, control flow mechanisms are simple, clean, and powerful, allowing developers to build robust, readable, and maintainable code. Go favors clarity over cleverness, so its control structures avoid unnecessary complexity seen in other languages.
+
+**Why is Control Flow Important?**
+
+- It allows your program to make decisions (if, switch)
+
+- Enables repetition and iteration (for, range)
+
+- Handles exceptions and recovery (panic, recover)
+
+- Helps implement branching logic and state management
+
+Let's dive deep in the world of Control flow, exploring the use and working of control statements.
+
+### If/Else
+
+[Youtube: If/Else](https://www.youtube.com/watch?v=xAgtKW250ZU&list=PLq3etM-zISamTauFTO5-G5dqBN07ckzTk&index=29)
+
+The `if` statement in Go allows us to execute a block of code if a given condition evaluates to true. Here’s the basic syntax:
+
+```
+package main
+
+import "fmt"
+
+func main() {
+    age := 25 // declaring and initilizing age
+
+    if age >= 18 { //false
+        fmt.Println("You are an adult.") // dont print
+    } 
+}
+```
+
+Here in the above example we define if statement with `if` keyword and check weather the variable age is greter than equal to 18, if it is true it executes the block of code otherwise moves next.
+
+**Else**
+
+Else is just an extention of if statement, 
+We can use the `else` statement to execute a different block of code when the condition in the `if` statement is false:
+
+```
+package main
+
+import "fmt"
+
+func main() {
+    num := 15
+
+    if num%2 == 0 { // if false executed else statement otherwise executes this block of code
+        fmt.Println("The number is even.")
+    } else {
+        fmt.Println("The number is odd.")
+    }
+}
+```
+
+**if-else-if**
+
+It is extention of If-else statement, it allows you to executes more than two condition, we can create a chain of if-else-if, if we are checking same variable or group of same variables.
+
+```
+package main
+
+import "fmt"
+
+func main() {
+    num := 13
+
+    if num == 10 { 
+        fmt.Println("10")
+    } else if num == 11 {
+        fmt.Println("11")
+    } else if num == 12 {
+        fmt.Println("12")
+    } else if num == 13 {
+        fmt.Println("13")
+    }
+}
+```
+
+All if, if-else, if-else-if statment have a scope thing declared under the scope cna only be used inside it. 
+
+There is a short variable declaration with if which declared as well as checks, and the variable can only be used insde the if and its chained if-else block.
+```
+if variable := expression; condition {
+    // use variable
+} else {
+    // use variable here too
+}
+```
+
+**Example:**
+```
+age:=19
+if even := isEven(age); even {
+    fmt.Println("Age is even")
+}
+```
+
+Here in the above example isEven is a function that take in a number(int) and return true or false based on it nature, so in the even variable false is stored as 19 is not even after semicolon we check the condition which is false and will not exectes the block of code.
+
+
+
+If statements can be nested too for multiple conditions check and it also follows scope policy the variable declared inside the nested if can be used inside that block, but the variable declared in the parent if can be used in nested if, its like global variable for the nested if.
+```
+num := 10
+if num > 0 {
+    a:=2 can be used in this scope and the nested scope inside it
+    if num%2 == 0 {
+        c:=a+2 // c can be used in this scope
+        fmt.Println("Positive Even Number")
+    }
+}
+```
+
+### Switch 
+
+The switch statement in Go is a multi-way branch that provides a clean alternative to long if-else-if chains. It allows you to match a value or condition against multiple cases, improving readability and efficiency.
+
+**Basic Syntax**
+```
+switch expression {
+case value1:
+    // block for value1
+case value2:
+    // block for value2
+default:
+    // default block (optional)
+}
+```
+
+
+**Example:**
+```
+day := "Monday"
+
+switch day {
+case "Monday":
+    fmt.Println("Start of the week")
+case "Friday":
+    fmt.Println("Almost weekend")
+default:
+    fmt.Println("Some other day")
+}
+
+```
+
+Here in the example above we have to initiate the switch block with `switch` keyword followed by the expression we need to check in this case it is a string, we start a code block inside that we check the value, it the value matches to the variable if executes the code otherwise it moves next until it finds default, then execute the code inside default and break out of switch. Unlike other programming languge like Java we dont need to use break in every case.
+
+There can be multiple values in a case
+
+```
+day := "Sunday"
+
+switch day {
+case "Saturday", "Sunday": // if day is Sunday or Saturday it will excutes the code
+    fmt.Println("Weekend")
+default:
+    fmt.Println("Weekday")
+}
+
+```
+
+We can declare a variable and use switch on it, In a single line and the variable declared can only be used in that switch block of code, here is an example:
+```
+word:="Hello!"
+switch wordLen:=len(word); wordLen {
+    case wordLen < 7:
+      fmt.Println("Short word")
+    case wordLen > 6 &&  wordLen < 12:
+      fmt.Println("Medium word")
+    case wordLen > 12:
+      fmt.Println("Long word")
+    default:
+      fmt.Println("word")
+}
+```
+
+`len()` is a function which returns no of rune(characters) are there in the string.
+
+**Fallthrough**
+
+By default, cases do not fall through to the next one (unlike C/C++). But you can explicitly use fallthrough.
+
+```
+value := 2
+
+switch value {
+case 1:
+    fmt.Println("One")
+case 2:
+    fmt.Println("Two")
+    fallthrough
+case 3:
+    fmt.Println("Three")
+    fallthrough
+case 4:
+    fmt.Println("Four")
+default:
+    fmt.Println("Default")
+}
+```
+*Use fallthrough carefully – it does not check the next case condition, it blindly executes the next block.*
+
+**Output:**
+```
+Two
+Three
+Four
+Default
+```
+Line wise Explanation:
+
+- Case 2 matched → prints "Two"
+- fallthrough → does NOT check condition of case 3, just runs it
+
+- Then fallthrough again → runs case 4
+
+- Then goes to default

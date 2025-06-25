@@ -16,9 +16,9 @@ Roadmap for Go
     - [x]  [Identifiers and Keyword](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/02.Getting%20Started#identifiers-and-keyword)
     - [x]  [Operators](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/02.Getting%20Started#operator)
 - [ ]  Control Flow
-    - [ ]  If/Else
+    - [x]  [If/Else Statements]()
+    - [x]  [Switch Statements]()
     - [ ]  Loops
-    - [ ]  Switch Statements
     - [ ]  Defer, Panic, Recover
 - [ ]  Functions
     - [ ]  Declaring and Calling Functions
@@ -50,7 +50,7 @@ Roadmap for Go
     - [ ]   Empty Interface
 - [ ]  Packages and Modules
     - [ ]  Organizing Code with Packages
-    - [ ]  E ported vs Une ported identifiers
+    - [ ]  Exported vs Une ported identifiers
     - [ ]  Go Modules
     - [ ]  Import Aliases and Dot Imports
 - [ ]  Error Handling
