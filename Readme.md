@@ -12,7 +12,9 @@ Roadmap for Go
 - [ ]  [Getting Started](https://github.com/RehanMerchant/Golang/blob/main/Go%20Fundamentals/02.Basic%20Syntax/Readme.md) 
     - [x]  [Packages and Import](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/02.Basic%20Syntax#packages-and-imports)
     - [x]  [Data Types](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/02.Basic%20Syntax#data-types)
-    - [ ]  Variables and Constance
+    - [x]  [Variables and Constanst]()
+    - [ ]  [Identifiers and Keyword]()
+    - [ ]  [Operators]()
 - [ ]  Control Flow
     - [ ]  If/Else
     - [ ]  Loops
@@ -24,7 +26,7 @@ Roadmap for Go
     - [ ]  Recursion
     - [ ]  Defer, Panic, Recover
     - [ ]  Anonymous Functions and Closures
-- [ ]  Comple  Types
+- [ ]  Complex  Types
     - [ ]  Arrays
     - [ ]  Slices
     - [ ]  Maps
