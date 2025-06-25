@@ -1,6 +1,6 @@
 # Control Flow
 
-![image](https://static7.depositphotos.com/1194063/684/i/450/depositphotos_6843383-stock-photo-hand-draws-flow-chart-on.jpg)
+![image](https://cdn.dribbble.com/userupload/20489652/file/still-36425da9b4c7b2c9b7b54818c92b7608.gif?resize=400x0)
 
 Control flow is one of the most fundamental aspects of any programming language. It defines the order in which individual statements, instructions, or function calls are executed. Without control flow, a program would simply execute line by line without any logic or decision-making ability.
 
