@@ -12,7 +12,7 @@ Roadmap for Go
 - [ ]  [Getting Started](https://github.com/RehanMerchant/Golang/blob/main/Go%20Fundamentals/02.Basic%20Syntax/Readme.md) 
     - [x]  [Packages and Import](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/02.Basic%20Syntax#packages-and-imports)
     - [x]  [Data Types](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/02.Basic%20Syntax#data-types)
-    - [x]  [Variables and Constanst]()
+    - [x]  [Variables and Constanst](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/02.Basic%20Syntax#variable-and-constants)
     - [ ]  [Identifiers and Keyword]()
     - [ ]  [Operators]()
 - [ ]  Control Flow
