@@ -312,6 +312,11 @@ fmt.Printf("Type of age is: %T\n", age)  // Output: float64
 
 ### Variable and Constants
 
+Resources:
+[Youtube: Variable](https://www.youtube.com/watch?v=UN5wEcW2I1o&list=PLq3etM-zISamTauFTO5-G5dqBN07ckzTk&index=6),
+[Youtube: Constanst](https://www.youtube.com/watch?v=wxhgWXfXUb8&list=PLq3etM-zISamTauFTO5-G5dqBN07ckzTk&index=7),
+
+
 Variables are used to store values, that will be used in further program and that variable can be changed throught the program, There are scope of variables, like if variable are declared in **Package level** that can be used and changed throught the whole package and there is **Function level** variable which are only allowed to use inside the respective function.
 
 Declared/Initilized variable which is unused in the program will cause a compile time error. It is mandatory to use all variables.
@@ -442,3 +447,450 @@ const (
 
 fmt.Println(D, E, F) // 1 2 3
 ```
+
+### Identifiers and Keyword
+
+Identifiers are the names we assing to the variable,constanst, functions, types, labels and packages for the use of the programmer to point to the information stored in memory while writing programs.
+
+There are certain rules that are to be followed while naming a identifier
+
+- Must begin with a letter (A-Z or a-z) or underscore (_)
+- Can contain letters, digits, and underscores.
+- Cannot begin with a digit.
+- Cannot use predeclared identifiers as identifiers.
+
+Predeclared identifiers are as follows:
+`any`,`bool`,`byte`,`comparable`,`compex64`,`complex128` and all other **Types**.
+`true`,`false`,`iota`,`nil` and other predeclared functions name like `real()`,`len()` etc.
+
+**Keywords**
+
+Keywords are reserved words that have special meaning in the Go language syntax.
+You cannot use them as identifiers (variable names, function names, etc.).
+
+There are list of 25 keywords 
+```
+break       default     func        interface   select
+case        defer       go          map         struct
+chan        else        goto        package     switch
+const       fallthrough if          range       type
+continue    for         import      return      var
+```
+
+Try coding all the things stated here weather it is true or not.
+
+### Operator
+
+[Read original Blog](https://www.geeksforgeeks.org/go-language/go-operators/)
+
+ Operators allow us to perform different kinds of operations on operands like additions, multiplication etc. There are various kinds of operator which we will be discussing throughly ahead.
+
+ Operator combine operands into expression
+
+ `2 + 2` Here 2,2 are the operands and `+` is the operator, the operator is peforming task on operands to make it an expression
+
+ Binary operator peforms operations on two operands while unary operator peforms on single operand. `++`,`--`,`!`,`*`,`&` etc are the example of unary operator and `/`,`*` etc are the example of binary operator.
+
+ Lets go through all kinds of operator and learn its uses and function.
+
+**Arithmetic Operator**
+
+These are used to perform arithmetic/mathematical operations on operands in Go language
+
+
+| Operator | Operation        |
+| -------- | ---------------- |
+| +        | Sum              |
+| -        | Difference       |
+| *        | Product          |
+| /        | Division         |
+| %        | Reminder         |
+
+```
+// Go program to illustrate the
+// use of arithmetic operators
+package main
+ 
+import "fmt"
+ 
+func main() {
+   p:= 34
+   q:= 20
+    
+   // Addition
+   result1:= p + q // Integers, floats, complex values and string (concatination)
+   fmt.Printf("Result of p + q = %d", result1)
+    
+   // Subtraction
+   result2:= p - q // Integers, floats and complex values 
+   fmt.Printf("\nResult of p - q = %d", result2)
+    
+   // Multiplication
+   result3:= p * q  // Integers, floats and complex values 
+   fmt.Printf("\nResult of p * q = %d", result3)
+    
+   // Division
+   result4:= p / q  // Integers, floats and complex values 
+   fmt.Printf("\nResult of p / q = %d", result4)
+    
+   // Modulus
+   result5:= p % q  // Integers
+   fmt.Printf("\nResult of p %% q = %d", result5)
+}
+```
+
+**Output:**
+```
+Result of p + q = 54
+Result of p - q = 14
+Result of p * q = 680
+Result of p / q = 1
+Result of p % q = 14
+```
+
+**Relational Operator**
+
+Relational operators are used for the comparison of two values and it returns the result in boolean types 
+
+| Operator  | Operation            |
+| --------- | -------------------- |
+| ==        | Equal to             |
+| !=        | Not equal to         |
+| >         | Greter than          |
+| <         | Less than            |
+| >=        | Greter than equal to |
+| <=        | Less than equal to   |
+
+```
+// Go program to illustrate the
+// use of relational operators
+package main
+ 
+import "fmt"
+ 
+func main() {
+   p:= 34
+   q:= 20
+    
+   // ‘=='(Equal To)
+   result1:= p == q
+   fmt.Println(result1)
+    
+   // ‘!='(Not Equal To)
+   result2:= p != q
+   fmt.Println(result2)
+    
+   // ‘<‘(Less Than)
+   result3:= p < q
+   fmt.Println(result3)
+    
+   // ‘>'(Greater Than)
+   result4:= p > q
+   fmt.Println(result4)
+    
+   // ‘>='(Greater Than Equal To)
+   result5:= p >= q
+   fmt.Println(result5)
+    
+   // ‘<='(Less Than Equal To)
+   result6:= p <= q
+   fmt.Println(result6)
+    
+    
+}
+```
+
+**Output:**
+```
+false
+true
+false
+true
+true
+false
+```
+
+**Logical Operator**
+
+They are used to combine two or more conditions/constraints or to complement the evaluation of the original condition in consideration. They are typically used in conditions (if, for, etc.).
+
+| Operator  | Operation       |
+| --------- | --------------- |
+| &&        | AND             |
+| ｜｜       | OR              |
+| !         | Not             |
+
+```
+// Go program to illustrate the
+// use of logical operators
+package main
+import "fmt"
+func main() {
+    var p int = 23
+    var q int = 60
+      
+    if(p!=q && p<=q){ 
+        fmt.Println("True")
+    }
+      
+    if(p!=q || p<=q){ 
+        fmt.Println("True")
+    }
+      
+    if(!(p==q)){ 
+        fmt.Println("True")
+    }
+      
+}
+```
+
+**Output:**
+```
+True
+True
+True
+```
+
+ **Bitwise Operator** 
+
+Bitwise operator are kind of operator which works at bit level and used to peform bit by bit operations mainly used for binary (0 & 1) operations only work on integer data type.
+
+| Operator  | Operation       |
+| --------- | --------------- |
+| &        | Bitwise AND      |
+| ｜       | Bitwise OR       |
+| ^        | Bitwise XOR      |
+| &^       | Bit clear AND NOT|
+| <<       | Left Shift       |
+| >>       | Right SHift      |
+
+- `&` (bitwise AND): Takes two numbers as operands and does AND on every bit of two numbers. The result of AND is 1 only if both bits are 1.
+- `|` (bitwise OR): Takes two numbers as operands and does OR on every bit of two numbers. The result of OR is 1 any of the two bits is 1.
+- `^` (bitwise XOR): Takes two numbers as operands and does XOR on every bit of two numbers. The result of XOR is 1 if the two bits are different.
+- `<<` (left shift): Takes two numbers, left shifts the bits of the first operand, the second operand decides the number of places to shift.
+-  `>>` (right shift): Takes two numbers, right shifts the bits of the first operand, the second operand decides the number of places to shift.
+- `&^` (AND NOT): This is a bit clear operator.
+
+```
+// Go program to illustrate the
+// use of bitwise operators
+package main
+ 
+import "fmt"
+ 
+func main() {
+   p:= 34
+   q:= 20
+    
+   // & (bitwise AND)
+   result1:= p & q
+   fmt.Printf("Result of p & q = %d", result1)
+    
+   // | (bitwise OR)
+   result2:= p | q
+   fmt.Printf("\nResult of p | q = %d", result2)
+    
+   // ^ (bitwise XOR)
+   result3:= p ^ q
+   fmt.Printf("\nResult of p ^ q = %d", result3)
+    
+   // << (left shift)
+   result4:= p << 1
+   fmt.Printf("\nResult of p << 1 = %d", result4)
+    
+   // >> (right shift)
+   result5:= p >> 1
+   fmt.Printf("\nResult of p >> 1 = %d", result5)
+    
+   // &^ (AND NOT)
+   result6:= p &^ q
+   fmt.Printf("\nResult of p &^ q = %d", result6)
+    
+    }
+```
+**Output:**
+```
+Result of p & q = 0
+Result of p | q = 54
+Result of p ^ q = 54
+Result of p << 1 = 68
+Result of p >> 1 = 17
+Result of p &^ q = 34
+```
+
+Let us understand what happened in the above example
+
+- p = 34, in binary: 00100010
+- q = 20, in binary: 00010100
+
+**`p & q` Bitwise And**
+
+```
+  00100010  (34)
+& 00010100  (20)
+----------
+  00000000  → 0
+```
+
+Bitwise AND returns 1 only if both bits are 1. Since there is no position where both p and q have 1, the result is 0.
+
+**`p | q` Bitwise OR**
+
+```
+  00100010  (34)
+| 00010100  (20)
+----------
+  00110110  → 54
+```
+
+Bitwise OR returns 1 if either bit is 1. Combining bits sets all 1s from both numbers → result is 54
+
+**`p ^ q` Bitwise XOR**
+
+```
+  00100010  (34)
+^ 00010100  (20)
+----------
+  00110110  → 54
+
+```
+
+Bitwise XOR returns 1 only if the bits are different. That's why result is again 54 here.
+
+**`p << 1` Left Shift**
+
+```
+00100010 << 1 → 01000100
+```
+
+Left shift moves all bits one place to the left, adding a 0 at the right end:
+
+Binary 01000100 = 68
+
+
+**`p >> 1` Right Shift**
+
+```
+00100010 >> 1 → 00010001
+```
+
+Right shift moves all bits one place to the right, discarding the rightmost bit:
+
+Binary 00010001 = 17
+
+
+**`p &^ q` Bit Clear (AND NOT)**
+
+```
+00100010  (34)
+&^
+00010100  (20)
+----------
+00100010 & (^00010100)
+        = 00100010 & 11101011
+        = 00100010 → 34
+```
+
+&^ means "AND NOT". It clears the bits in p where q has 1s. Since q doesn't share any 1 bits with p, p remains unchanged → 34.
+
+You can read more about it from [here](https://dzone.com/articles/bitwise-operators-in-go)
+
+**Assignment Operators**
+
+Assignment operators are used to assigning a value to a variable. The left side operand of the assignment operator is a variable and right side operand of the assignment operator is a value.
+`=` is the simple exmple of assingment operator but will will explore other types of assingment operator as well
+
+
+- `= (Simple Assignment)`: This is the simplest assignment operator. This operator is used to assign the value on the right to the variable on the left.
+- `+= (Add Assignment)`: This operator is a combination of ‘+’ and ‘=’ operators. This operator first adds the current value of the variable on left to the value on the right and then assigns the result to the variable on the left.
+- `-= (Subtract Assignment)`: This operator is a combination of ‘-‘ and ‘=’ operators. This operator first subtracts the current value of the variable on left from the value on the right and then assigns the result to the variable on the left.
+- `*= (Multiply Assignment)`: This operator is a combination of ‘*’ and ‘=’ operators. This operator first multiplies the current value of the variable on left to the value on the right and then assigns the result to the variable on the left.
+- `/= (Division Assignment)`: This operator is a combination of ‘/’ and ‘=’ operators. This operator first divides the current value of the variable on left by the value on the right and then assigns the result to the variable on the left.
+- `%= (Modulus Assignment)`: This operator is a combination of ‘%’ and ‘=’ operators. This operator first modulo the current value of the variable on left by the value on the right and then assigns the result to the variable on the left.
+- `&= (Bitwise AND Assignment)`: This operator is a combination of ‘&’ and ‘=’ operators. This operator first “Bitwise AND” the current value of the variable on the left by the value on the right and then assigns the result to the variable on the left.
+- `^= (Bitwise Exclusive OR)`: This operator is a combination of ‘^’ and ‘=’ operators. This operator first “Bitwise Exclusive OR” the current value of the variable on left by the value on the right and then assigns the result to the variable on the left.
+- `|= (Bitwise Inclusive OR) `: This operator is a combination of ‘|’ and ‘=’ operators. This operator first “Bitwise Inclusive OR” the current value of the variable on left by the value on the right and then assigns the result to the variable on the left.
+- `<<= (Left shift AND assignment operator)`: This operator is a combination of ‘<<’ and ‘=’ operators. This operator first “Left shift AND” the current value of the variable on left by the value on the right and then assigns the result to the variable on the left.
+- `>>= (Right shift AND assignment operator)`: This operator is a combination of ‘>>’ and ‘=’ operators. This operator first “Right shift AND” the current value of the variable on left by the value on the right and then assigns the result to the variable on the left.
+
+```
+// Go program to illustrate the
+// use of assignment operators
+package main
+  
+import "fmt"
+  
+func main() {
+   var p int = 45
+    var q int = 50
+     
+   // “=”(Simple Assignment)
+   p = q
+   fmt.Println(p)
+     
+   // “+=”(Add Assignment)
+    p += q
+   fmt.Println(p)
+     
+   //“-=”(Subtract Assignment)
+   p-=q
+   fmt.Println(p)
+     
+   // “*=”(Multiply Assignment)
+   p*= q
+   fmt.Println(p)
+     
+   // “/=”(Division Assignment)
+    p /= q
+   fmt.Println(p)
+    
+    // “%=”(Modulus Assignment)
+    p %= q
+   fmt.Println(p)
+    
+}
+```
+
+**Output:**
+```
+50
+100
+50
+2500
+50
+0
+```
+
+There are some other kind of operator, listed below
+
+| Operator  | Operation       |
+| --------- | --------------- |
+| ++        | Increment      |
+| --       | Decrement       |
+| &        | Address      |
+| *       | De-redrefrencing |
+| <-     | Channel       |
+
+`++` Operator used to increse the value by one like `var a int = 10`  `a++ // it will increase the value to 11`.
+
+`--` Operator decreses the value by one.
+
+
+We will be discussing about Address, De-refrencing and Channel operator ahead.
+
+**Operator Precedence**
+
+The precedence of operator is followed by `PEMDAS` where `P` is Parenthesis, `E` is Exponents, `M` for Multiplication, `D` for Division `A` for Addition and `S` is Substraction.
+
+There are other operator precedence that should be considered
+
+| Precendence  | Operator       |
+| --------- | --------------- |
+| 6        | ++, --      |
+| 5       | *,/,%,<<,>>,&,&^       |
+| 4       | +, -, |, ^      |
+| 3       | ==, !=, <, >, <=, >= |
+| 2     | &&      |
+| 1     |   ｜｜     |
+
+**6 is the highest precedence and 1 is lowest and all are evluated from left to right*
