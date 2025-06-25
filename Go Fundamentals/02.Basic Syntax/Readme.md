@@ -246,8 +246,29 @@ func main() {
 
 Try all explained feature of your own to get a better understanding of the fundamentals of go.
 
+#### Boolean (bool)
 
-**Strings**
+bool data type represents either true or false, These values are fundamental for controlling flow through conditional and logical statements.
+
+The memory size of bool in go is 1 Byte and zero value of bool is false.
+
+```
+package main
+
+import "fmt"
+
+func main() {
+	
+	var isbool bool     // isbool variable is of bool type
+	fmt.Println(isbool) // Zero value of bool is false
+	isbool = true       // Initializing true to isbool
+	fmt.Println(isbool) // true
+
+}
+```
+
+
+#### Strings
 
 String data types are used for text in go, we can define string with only `""` double quotes and backticks, Example: "Hello world". Empty string is the zero value for string. Go supports **Unicode**, it is the reason we can use various character and symbols and emojis.
 
@@ -280,4 +301,144 @@ func main() {
 //Explore all other functions of ftm of your own
 
 }
+```
+
+You can check the data type of the variable using fmt in go, There are lots of other things about fmt we will talk further but here is an simple example:
+
+```
+age := 12.22
+fmt.Printf("Type of age is: %T\n", age)  // Output: float64
+```
+
+### Variable and Constants
+
+Variables are used to store values, that will be used in further program and that variable can be changed throught the program, There are scope of variables, like if variable are declared in **Package level** that can be used and changed throught the whole package and there is **Function level** variable which are only allowed to use inside the respective function.
+
+Declared/Initilized variable which is unused in the program will cause a compile time error. It is mandatory to use all variables.
+```
+package main
+
+import "fmt"
+
+var myint int = 10 //package level declaration
+
+func main() {
+var myfloat float64 = 44.55 
+smt() // calling smt function that prints 12.43 not 44.55
+
+}
+
+func smt(){
+	var myfloat float64 = 12.43 // function level declaration cand be used only inside the scopr of smt function
+	fmt.Println(myfloat)
+}
+```
+
+Each variable must have a type associated to it, There are two ways to declare variable **Explicit** and **Implicit**
+
+```
+var name string  //variable named 'name' which is a type of string
+var age int = 19; // age named variable with 10 stored in it
+```
+
+The above example is the type of explicit declaration where the programmer has to create a variable with its type. Initially the variable will contain the zero value of the data type.
+
+Implict declaration, when a variable infered the data type of its own, this can be done using short variable declaration.
+
+```
+age := 19 //Implicit declaration of variable age to 19
+```
+In the above example, we can see we dont have to use var and instead of = we use := , Here age variable automatically infer the type based on the value, here it is int cause 19 fallthrough under int category.
+
+19 also comes under int8,16,32,64 and uint8,16,32,64 why int is choosed as the type of the variable, It is because go generally decides to infer to the default type and Using int8, int16, etc, can lead to extra CPU instructions for sign extension and type conversion, which can slow down performance, Since CPUs are optimized for their native word size, using int allows the Go compiler to generate faster machine code on most platforms.
+
+```
+age:=19 //int
+money:=12.44 //float64
+name:="Rehan" //string
+```
+
+**Multiple variable declaration**
+
+```
+a, b, c := 10, 20, 30
+name, age := "Rehan", 19
+
+var x, y int = 1, 2
+var name, isStudent = "Rehan", true
+
+var a, b, c int     // all are 0 by default
+var s1, s2 string   // all are "" by default
+
+var (
+    name     = "Rehan"
+    age      = 22
+    isActive = true
+)
+
+var (
+    x int
+    y string
+    z bool
+)
+
+// Try it out of your self
+```
+
+**Constants**
+
+Constants are values that once initialized can't be changed during the execution of the program (immutable). It is declared using `const` keyword like `var` for declaring variable. It is evaluated at compile time and it can be used anywhere a literal could be used.
+
+Boolean (true,false), Numeric (1,100,12.33,-23), String ("Hello") and Rune('A', 'ई') can be stored as constant in go.
+
+There are two types of constanst: **typed** and **untyped**. Typed constanst has a type associated with it like int,bool etc. and untyped constanst, were the value is automitically infered or it fallbakc to default type for the constant value.
+
+Constanst can be declared and initilized in Package or function level like variable, they cna also be grouped using parenthesis.
+
+Unlike variable there can be unused constants.
+
+```
+const name = "Rehan"
+const age = 22
+const pi = 3.14
+
+const x = 10    // untyped
+
+const y int = 10  // typed constant
+
+//multiple
+const (
+    A = 1
+    B = 2
+    C = 3
+)
+
+const x = 10 + 5
+const y = x * 2
+```
+
+**Iota**
+
+Iota is a special feature in go that is used to generate constants for enumerated constants. iota is a predeclared identifier in Go used inside const blocks to generate sequential values automatically.
+
+It’s often used to create enums, flags, and bit patterns.
+
+Iota always starts with 0 for the first ocnstants in a block and it is incremented by 1 for each line.
+
+```
+const (
+    A = iota  // 0
+    B         // 1
+    C         // 2
+)
+
+fmt.Println(A, B, C) // 0 1 2
+
+const (
+    D = iota + 1  // 1
+    E             // 2
+    F             // 3
+)
+
+fmt.Println(D, E, F) // 1 2 3
 ```
