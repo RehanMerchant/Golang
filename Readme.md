@@ -15,9 +15,9 @@ Roadmap for Go
     - [x]  [Variables and Constanst](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/02.Getting%20Started#variable-and-constants)
     - [x]  [Identifiers and Keyword](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/02.Getting%20Started#identifiers-and-keyword)
     - [x]  [Operators](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/02.Getting%20Started#operator)
-- [ ]  Control Flow
-    - [x]  [If/Else Statements]()
-    - [x]  [Switch Statements]()
+- [ ]  [Control Flow](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/03.Control%20Flow)
+    - [x]  [If/Else Statements](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/03.Control%20Flow#ifelse)
+    - [x]  [Switch Statements](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/03.Control%20Flow#switch)
     - [ ]  Loops
     - [ ]  Defer, Panic, Recover
 - [ ]  Functions
