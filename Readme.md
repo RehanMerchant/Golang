@@ -9,12 +9,12 @@ Roadmap for Go
     - [x]  [Design Goals](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/01.Introduction%20to%20Go#design-goals)
     - [x]  [Why Go](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/01.Introduction%20to%20Go#why-go)
     - [x]  [Installing Go and Setting up](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/01.Introduction%20to%20Go#installing-and-setting-up)
-- [ ]  [Getting Started](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/02.Getting%20Started) 
+- [x]  [Getting Started](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/02.Getting%20Started) 
     - [x]  [Packages and Import](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/02.Getting%20Started#packages-and-imports)
     - [x]  [Data Types](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/02.Getting%20Started#data-types)
     - [x]  [Variables and Constanst](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/02.Getting%20Started#variable-and-constants)
-    - [ ]  [Identifiers and Keyword]()
-    - [ ]  [Operators]()
+    - [x]  [Identifiers and Keyword](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/02.Getting%20Started#identifiers-and-keyword)
+    - [x]  [Operators](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/02.Getting%20Started#operator)
 - [ ]  Control Flow
     - [ ]  If/Else
     - [ ]  Loops
