@@ -18,7 +18,7 @@ Roadmap for Go
 - [ ]  [Control Flow](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/03.Control%20Flow)
     - [x]  [If/Else Statements](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/03.Control%20Flow#ifelse)
     - [x]  [Switch Statements](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/03.Control%20Flow#switch)
-    - [ ]  Loops
+    - [x]  [Loops](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/03.Control%20Flow#loops)
     - [ ]  Defer, Panic, Recover
 - [ ]  Functions
     - [ ]  Declaring and Calling Functions

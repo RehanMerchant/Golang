@@ -122,6 +122,8 @@ if num > 0 {
 
 ### Switch 
 
+[Youtube: Switch](https://www.youtube.com/watch?v=XkL6lEG8X7M&list=PLq3etM-zISamTauFTO5-G5dqBN07ckzTk&index=34)
+
 The switch statement in Go is a multi-way branch that provides a clean alternative to long if-else-if chains. It allows you to match a value or condition against multiple cases, improving readability and efficiency.
 
 **Basic Syntax**
@@ -224,3 +226,160 @@ Line wise Explanation:
 - Then fallthrough again → runs case 4
 
 - Then goes to default
+
+
+### Loops
+
+[Resources: Blog](https://www.geeksforgeeks.org/go-language/loops-in-go-language/)
+
+Go language contains only a single loop that is for-loop. A for loop is a repetition control structure that allows us to write a loop that is executed a specific number of times. In go there are multiple ways for loop can be used to peform different task
+
+Thye basic syntax for `for loop` is very similar to other language.
+```
+for initialization; condition; post{
+       // statements....
+}
+```
+
+Here the initialization statement is **optional**, it executes before the loop starts, the condition holds a boolean expression which is checked at every iteration, if the value is true the loop executes. The post statement generally changes the value based on which the condition chnage to false to exit the loop.
+
+```
+// Go program to illustrate the  
+// use of simple for loop 
+package main
+
+import "fmt"
+
+// Main function
+func main() {
+    
+    // for loop 
+    // This loop starts when i = 0 
+    // executes till i<4 condition is true
+    // post statement is i++
+    for i := 0; i < 4; i++{
+      fmt.Printf("Hello World\n")  
+    }
+  
+}
+```
+For loop can be used as infinite loop in go, it will executes **infinitely**.
+```
+for {
+     // Statement...
+}
+```
+
+**While loop** is not there in go unlike other programming language, but the concept of while is there which can be achived using for loop, here is an example
+```
+// Go program to illustrate the  
+// the for loop as while Loop
+package main
+
+import "fmt"
+
+// Main function
+func main() {
+    
+    // while loop
+    // for loop executes till 
+    // i < 3 condition is true
+    i:= 0
+    for i < 3 {
+       i += 2
+    }
+  fmt.Println(i) 
+}
+```
+
+In the above program `for` keyword is followed by only `condition` just like while loop, and the statement executes until the condition is false.
+
+**Ranges**
+
+We can iterate through a loop until the condition is false, in this case we generally know about how many iterations we will have or the condition when will the loop stop.
+
+Lets think about how we used to iterate through a Array elemnts, we get the length of array, start the loop from 0 to the length and get the element using `arr[i]`. There are different complex data types like array,slices,maps (group of data stacked), we have the feature called `range` to loop through all the elements contained in it 
+```
+// Go program to illustrate the  
+// use of simple range loop 
+package main
+
+import "fmt"
+
+// Main function
+func main() {
+    
+    // Here rvariable is a array
+    rvariable:= []string{"GFG", "Geeks", "GeeksforGeeks"} 
+    
+    // i and j stores the value of rvariable
+    // i store index number of individual string and
+    // j store individual string of the given array
+    for i, j := range rvariable {
+       fmt.Println(i, j) 
+    }
+  
+}
+```
+**Output:**
+```
+0 GFG
+1 Geeks
+2 GeeksforGeeks
+```
+
+Here above we have an Array of three strings called rvariable, we loop through the rvariable with returns two variable i and j where i is index and j is the content for that index in this case it is string and index is always integer.
+
+There are other complex types we can loop through like Slices and Maps, we will discuss it in their respective types.
+
+We can loop through a **string** in go as well because string are just continous array like structure (We will discuss it further) which will return index and the char in the from of rune (character).
+
+```
+// Go program to illustrate the  
+// use for loop using string
+package main
+
+import "fmt"
+
+// Main function
+func main() {
+    
+    // String as a range in the for loop
+    for i, j:= range "XabCd" {
+       fmt.Printf("The index number of %U is %d\n", j, i) 
+    }
+  
+}
+```
+
+**Break and Continue**
+
+Break and Continue are the most important control flow statements in loops.
+
+**Break**
+
+- Used to immediately exit the current loop (no further iterations).
+- Commonly used when a condition is met early.
+
+```
+for i := 1; i <= 10; i++ {
+	if i == 5 {
+		break
+	}
+	fmt.Println(i)
+}
+```
+**Continue** 
+
+- Skips the rest of the current iteration and goes to the next loop cycle.
+
+- Useful for ignoring specific values.
+
+```
+for i := 1; i <= 5; i++ {
+	if i == 3 {
+		continue
+	}
+	fmt.Println(i)
+}
+```
