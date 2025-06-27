@@ -383,3 +383,125 @@ for i := 1; i <= 5; i++ {
 	fmt.Println(i)
 }
 ```
+
+### Defer, Panic and Recover
+
+In Go, defer, panic, and recover are built-in mechanisms used for managing control flow and error handling. They are especially useful in handling unexpected runtime errors gracefully.
+
+**Defer**
+
+Defer, postpone execution until function ends,
+Used to delay execution of a statement until the surrounding function returns.
+
+```
+package main
+
+import "fmt"
+
+func example() {
+    defer fmt.Println("Deferred: 2")
+    fmt.Println("Executing: 1")
+}
+
+func main() {
+    example()
+}
+```
+
+**Output:**
+```
+Executing: 1
+Deferred: 2
+```
+
+It is mainly used to close files, unlocking mutexes and releasing resources (we will learn about all further)
+
+In Go, each function call is stored in the call stack. When you use defer inside a function, the deferred function is not called immediately, but is scheduled to run after the surrounding function finishes, just before it returns.
+
+If there are multiple deferred calls, they execute in Last-In-First-Out (LIFO) order. So, the last deferred call is executed first, and the first one last.
+
+**Panic and Recover**
+
+panic is a built-in function in Go that stops the execution of a program when an unrecoverable error occurs
+
+**When panic is called?**
+
+- The function where panic was called stops immediately.
+- Any defer statements in that function run before it exits.
+- Then the program goes back up the call stack, running deferred functions in each caller.
+- If the panic is not recovered, the program crashes.
+
+```
+package main
+import "fmt"
+
+func division(num1, num2 int) {
+    // if num2 is 0, program is terminated due to panic
+    if num2 == 0 {
+        panic("Cannot divide a number by zero")
+    } else {
+        result := num1 / num2
+        fmt.Println("Result: ", result)
+    }
+}
+
+func main() {
+    division(4, 2)
+    division(8, 0) // This will cause a panic
+    division(2, 8) // This line will not execute
+}
+```
+**Output:**
+```
+Result:  2
+panic: Cannot divide a number by zero
+```
+
+Above is the example where we have a function which taked two int and return the queotient, but when it is divided by zero the program panics. It prints the result of first function call, the next function causes panic  and the next function call will not be exected.
+
+**Recover**
+
+While panic is used to terminate a program, recover is used to regain control after a panic has occurred. This allows the program to handle the error gracefully instead of crashing.
+
+The recover function is used inside a deferred function to catch the panic message and resume normal execution. If recover is called outside of a deferred function, it has no effect.
+
+```
+package main
+import "fmt"
+
+// recover function to handle panic
+func handlePanic() {
+    // detect if panic occurs or not
+    a := recover()
+
+    if a != nil {
+        fmt.Println("RECOVER:", a)
+    }
+}
+
+func division(num1, num2 int) {
+    // execute the handlePanic even after panic occurs
+    defer handlePanic()
+
+    // if num2 is 0, program is terminated due to panic
+    if num2 == 0 {
+        panic("Cannot divide a number by zero")
+    } else {
+        result := num1 / num2
+        fmt.Println("Result:", result)
+    }
+}
+
+func main() {
+    division(4, 2)
+    division(8, 0) // This will cause a panic, but it will be recovered
+    division(2, 8)
+}
+```
+
+**When to Use `defer`, `panic`, and `recover`**
+
+- defer: Use defer for cleanup tasks, such as closing files, releasing locks, or logging. It ensures that resources are properly managed, even if an error occurs.
+- panic: Use panic for unrecoverable errors, such as invalid input or system failures, where continuing execution would cause more harm.
+- recover: Use recover to handle panics gracefully, especially in long-running applications like servers, where crashing is not an option.
+
