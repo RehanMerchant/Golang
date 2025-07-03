@@ -145,6 +145,8 @@ func valid(msg string, nums ...int) {
 
 ### Understanding Functions
 
+[Youtube: Understanging Functions](https://www.youtube.com/watch?v=shR8FjF7Dms&list=PLq3etM-zISamTauFTO5-G5dqBN07ckzTk&index=37)
+
 Functions in go are first class citizens, this means functions are treated like any other data we can assingn functions to variable, we can pass functions to another functions and even they can be returned in a function.
 
 
@@ -265,5 +267,61 @@ func arithmeticOperation(op string) operation {
 
 ### Anonymous Functions and Closures
 
+[Youtube: Closure and Anonymous Function](https://www.youtube.com/watch?v=qndZOd-UwoA&list=PLq3etM-zISamTauFTO5-G5dqBN07ckzTk&index=38)
+
+**Closure** in Go is a function value that references variables from outside its body. The function can access and modify these variables even after the outer function has finished executing.
+
+Clousers are functions that closes over values and it captures the value from its surrounding scope usually a function block and keeps access to the closed over variable. Closure can also been seen as a function with state associated
+
+A closed value can be used or updated without affecting the other clouser value, it is independent and it it generaly used for creating memorizatio functions, implementing callbacks etc.
+
+Lets see a basic example
+```
+package main
+
+import "fmt"
+
+func outer() func() int {
+    x := 0
+    return func() int {
+        x++
+        return x
+    }
+}
+
+func main() {
+    counter := outer()
+
+    fmt.Println(counter()) // 1
+    fmt.Println(counter()) // 2
+    fmt.Println(counter()) // 3
+}
+
+```
+
+In the above code we have a `outer` function which returns a function which increases the value of local variable `x` by 1.
+Even afte outer function is done, its local variable x stays alive. Everytime we we use `counter` it prints the value of x
 
 
+**Anonymous Functions**
+
+An anonymous function is a function without a name. You can define and use it immediately, or assign it to a variable.
+It is generally useful for defining small piece of functionality inline without the need to give a name. Mostly used in callbacks
+
+Example:
+```
+package main
+
+import "fmt"
+
+func main() {
+    result := func(a, b int) int {
+        return a + b
+    }(3, 4)  // <- function is called immediately
+
+    fmt.Println(result)  // Output: 7
+}
+
+```
+
+**Both Anonymous Functions and Closures are used in pair to write highly flexible and functional code.**
