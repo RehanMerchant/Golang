@@ -23,7 +23,7 @@ Roadmap for Go
 - [x]  Functions
     - [x]  [Declaring and Calling Functions](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/04.Functions#declaring-and-calling-functions)
     - [x]  [Variadic Parameters](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/04.Functions#variadic-parameters)
-    - [x]  [Understanding Functions]()
+    - [x]  [Understanding Functions](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/04.Functions#understanding-functions)
     - [x]  [Anonymous Functions and Closures]()
 - [ ]  Complex  Types
     - [ ]  Arrays
