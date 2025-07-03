@@ -22,7 +22,7 @@ Roadmap for Go
     - [x]  [Defer, Panic, Recover](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/03.Control%20Flow#defer-panic-and-recover)
 - [ ]  Functions
     - [x]  [Declaring and Calling Functions](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/04.Functions#declaring-and-calling-functions)
-    - [ ]  Return Values
+    - [x]  [Variadic Parameters]()
     - [ ]  Recursion
     - [ ]  Defer, Panic, Recover
     - [ ]  Anonymous Functions and Closures
