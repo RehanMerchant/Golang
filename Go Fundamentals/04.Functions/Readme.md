@@ -130,7 +130,7 @@ In the above code we declared a function called Sum which takes in variable para
 
 After taking in a slice of int we range over it (run through all int elements in the slice) and add that to the local variable `t` and return it.
 
-**It is mandatory to have the variadic fucntion at the end of all arguments otherwise it will not compile**
+**It is mandatory to have the variadic fucntion at the end of all arguments otherwise it will not compile.**
 
 ```
 // This will not compile!
@@ -142,3 +142,128 @@ func valid(msg string, nums ...int) {
     fmt.Println(msg, nums)
 }
 ```
+
+### Understanding Functions
+
+Functions in go are first class citizens, this means functions are treated like any other data we can assingn functions to variable, we can pass functions to another functions and even they can be returned in a function.
+
+
+
+**Function signature** is simple code snippet which gives brief information about the function without the code in it, Some of the example are listed below
+```
+func sum(a,b int) int
+func(int,int) int
+func printName(name string)
+func (string)
+```
+
+
+```
+func main(){
+  fullname := func(s1,s2 string) string {
+    return fmt.Sprintf("%s %s", s1, s2)
+  }
+
+welcomestring := sayHello("code", "learned", fullname) 
+
+fmt.Println(welcomestring)
+
+}
+
+func sayHello(fist,last string, fn func(string,string) string) string {
+  fullname:= fn(first,last)
+  return fmt.Sprintf("Welcome %s", fullname)
+}
+
+```
+
+In the above function we initilized a function to fullname which takes in 2 string and return joining them. After that we call it `sayHello` function where we take in 2 string input mostly the name first and last and takes in a function whose signature is same as fullName function and the sayHello function returns a string inside it we create a `fullname` variable which contain the string returned by the function passed in sayHello, that is `fullName` (function in main block).
+
+So we got `code learn` in fullname inside sayHello and then we return `welcome code learn`,
+We capture that inside welcomeString in main block and print it
+
+**Example**
+
+```
+package main
+
+func multiplyBy(multiplier int) func (int) int {
+  return func (i int) int {
+    return i*multiplier
+  }
+}
+
+func main() {
+  multiplyby2 := multiplyBy(2)
+  multiplyby3 := multiplyBy(3)
+
+fmt.Println(multiplyby2(10)) // 20
+
+}
+```
+
+In the above example, we have created a function called `multiplyBy` function which takes in multiplier and return the function which takes in a int and return the int multiplied by multiplier
+
+We can create `multiplyby2`,`multiplyby3` etc functions and pass in respective value like 2,3 and those function can be used as function to double and triple
+
+**Function Types**
+
+The function signature works as its type, We use function signature to define what kind of function we want to recive or return. Genrally the functions signature are large so we cant use that large block of code again and again, we can make it a custom type which will enhances the code redibility
+
+Lets update the multiplyBy code we saw previously
+
+```
+package main
+
+type mignature func(int) int
+
+func multiplyBy(multiplier int) mignature {
+  return func (i int) int {
+    return i*multiplier
+  }
+}
+
+func main() {
+  multiplyby2 := multiplyBy(2)
+  multiplyby3 := multiplyBy(3)
+
+fmt.Println(multiplyby2(10)) // 20
+
+}
+```
+
+The above code didn't change much cause it is a simpler function but it will be used vastly to write clean and consise code which other can understand easily.
+
+Here is another example:
+
+```
+type operation func (int,int) int
+
+func main() {
+  var peform operation
+  peform = arithmeticOperation("add")
+  result := peform(1,2)
+  fmt.Println(result)
+}
+
+func arithmeticOperation(op string) operation {
+  switch op {
+    case "add":
+        return func(n1,n2 int) int {
+          return n1+n2
+        }
+    case "sub":
+        return func(n1,n2 int) int {
+          reutn n1-n2
+        }
+
+  }
+}
+
+```
+
+
+### Anonymous Functions and Closures
+
+
+
