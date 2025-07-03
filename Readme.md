@@ -21,7 +21,7 @@ Roadmap for Go
     - [x]  [Loops](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/03.Control%20Flow#loops)
     - [x]  [Defer, Panic, Recover](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/03.Control%20Flow#defer-panic-and-recover)
 - [ ]  Functions
-    - [x]  [Declaring and Calling Functions](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/03.Control%20Flow#)
+    - [x]  [Declaring and Calling Functions](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/04.Functions#declaring-and-calling-functions)
     - [ ]  Return Values
     - [ ]  Recursion
     - [ ]  Defer, Panic, Recover
