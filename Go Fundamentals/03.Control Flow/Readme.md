@@ -386,6 +386,8 @@ for i := 1; i <= 5; i++ {
 
 ### Defer, Panic and Recover
 
+[Resources: Blog](https://www.geeksforgeeks.org/go-language/go-defer-panic-and-recover/)
+
 In Go, defer, panic, and recover are built-in mechanisms used for managing control flow and error handling. They are especially useful in handling unexpected runtime errors gracefully.
 
 **Defer**
