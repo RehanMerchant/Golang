@@ -25,7 +25,7 @@ Roadmap for Go
     - [x]  [Variadic Parameters](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/04.Functions#variadic-parameters)
     - [x]  [Understanding Functions](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/04.Functions#understanding-functions)
     - [x]  [Anonymous Functions and Closures](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/04.Functions#anonymous-functions-and-closures)
-- [ ]  Complex  Types
+- [x]  [Complex  Types](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/05.Complex%20Types)
     - [ ]  Arrays
     - [ ]  Slices
     - [ ]  Maps
