@@ -30,7 +30,6 @@ Roadmap for Go
     - [ ]  Slices
     - [ ]  Maps
     - [ ]  Structs
-    - [ ]  Anonymous Functions and Closures
 - [ ]  Pointers & Memory
     - [ ]  Basic Pointer Synta 
     - [ ]  Pointers to Structs
@@ -42,8 +41,8 @@ Roadmap for Go
     - [ ]  Method promotion
     - [ ]  Constructor Patterns
 - [ ]  Interfaces
-    - [ ]  Basic Interface Definition
-    - [ ]  Implementing Interfaces implicitly
+    - [ ]   Basic Interface Definition
+    - [ ]   Implementing Interfaces implicitly
     - [ ]   Type Assertions & Type Switches
     - [ ]   Interface Composition
     - [ ]   Empty Interface
@@ -83,7 +82,7 @@ Roadmap for Go
     - [ ]  golint, staticcheck
     - [ ]  go doc, go list, go mod
     - [ ]  delve
-    - [ ] race
+    - [ ]  race
 - [ ]  Advanced Topics
     - [ ] Reflection (reflect package)
     - [ ] Unsafe operations (via unsafe package)
