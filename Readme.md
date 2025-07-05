@@ -26,8 +26,8 @@ Roadmap for Go
     - [x]  [Understanding Functions](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/04.Functions#understanding-functions)
     - [x]  [Anonymous Functions and Closures](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/04.Functions#anonymous-functions-and-closures)
 - [x]  [Complex  Types](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/05.Complex%20Types)
-    - [ ]  Arrays
-    - [ ]  Slices
+    - [x]  [Arrays](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/05.Complex%20Types#arrays)
+    - [x]  [Slices](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/05.Complex%20Types#slices)
     - [ ]  Maps
     - [ ]  Structs
 - [ ]  Pointers & Memory
