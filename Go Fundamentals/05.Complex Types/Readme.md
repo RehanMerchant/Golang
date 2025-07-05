@@ -201,6 +201,9 @@ s[:5] // 10 11 12 13 15
 
 //last 5
 s[len(s)-5:] // 14 15 16 17 19
+
+//All
+s[:] // 10 11 12 13 14 15 16 17 18 19
 ```
 
 All other features mutating the value from array are also here in slices too.
@@ -219,4 +222,77 @@ s= append(s,b...) // appending all elemets of slice b to slice a
 
 _Slices in go are like pointer that points to the underlying array it holds the address of the array._ This the reason **Slices are not comparable and we can compare slices to nil only and nil is the zero value of a slice.**
 
+
 There is a inbuilt function called `Equal` from slices package to compare two slices value by value.
+
+
+Nil and empty slice are different in go, lets demonstrate it.
+```
+var a []int
+fmt.Println(a == nil) //true
+a = []int{}
+fmt.Println(a == nil)  //false
+```
+
+**As we know slice are just pointers to the underlying array so changes made on slices can affect the original array this affecting other slices refrrencing it.**
+
+```
+a:=[]int{1,2,3,4,5,6,7,8}
+b:=a[2:]
+b[0]=100
+b = append(b,200)
+fmt.Println(a)
+fmt.Println(b)
+```
+Output
+```
+[1 2 100 4 5 6 7 8]
+[100 4 5 6 7 8 200]
+```
+
+In the above code example we can see that we changed th first element of slice b to 100 which also altered the 2 index element of the slice a.
+
+If we move the line `b = append(b,200)` above it will create new array for b and will not conflict with the array underlying a
+
+```
+a:=[]int{1,2,3,4,5,6,7,8}
+b:=a[2:]
+b = append(b,200)
+b[0]=100
+fmt.Println(a) //[1 2 3 4 5 6 7 8]
+fmt.Println(b) // [100 4 5 6 7 8 200]
+```
+
+**Copy**
+
+There is a inbuilt copy function in go which is generally used to copy all elements from one slice to another slice (only slice)
+
+Thet copy function returns the no of elements copied and it will copy avaliable element even if the src or dest size are different.
+
+```
+package main
+
+import "fmt"
+
+func main() {
+	src := []int{1, 2, 3}
+	dest := make([]int, 3)
+
+	n := copy(dest, src)
+
+	fmt.Println("Copied:", n)        // Copied: 3
+	fmt.Println("Destination:", dest) // Destination: [1 2 3]
+}
+```
+
+**As we can slice an array to make it another slice, same we can slice a slice too.**
+But we have to be very careful because a slice is pointing to a underlying array, when we slice the parent slice we get a child slice which is pointing to the same array as parent slice from its given index changes made on child slice can affect parent slice as well as the underlying array.
+
+**After slicing the parent slice, the child slice gets capacity from the starting index up to the end of the underlying array — which is `cap(parent) - start index.`**
+
+```
+parent := []int{10, 20, 30, 40, 50}
+child := parent[1:3]
+fmt.Println("len(child):", len(child)) // 2
+fmt.Println("cap(child):", cap(child)) // 4
+```
