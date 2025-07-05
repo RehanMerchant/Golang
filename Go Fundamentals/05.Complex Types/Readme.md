@@ -40,10 +40,9 @@ Lets see how are Arrays stored in memory
 
 ```
 
-In the above diagram we cann see a continious block of element storing int datatype value  with each element having address as index. The length of array is 5.
+In the above diagram we cann see a continious block of element storing int datatype value with each element having address as index. The length of array is 5.
 
 Suppose the above array is named as `arr` we can access the first element by using `arr[0]` this will give the value of the element in that position `10`. and we can get all its respevtively value till `arr[4]` if we try to extract the value from the position beyond 4 the code panics
-
 
 `var array_name = [length]datatype{values}`, This is the syntax for declaring a array with a specified length and it is mandatory to give information about size when we are declaring an array.
 
@@ -62,7 +61,9 @@ func main() {
   fmt.Println(arr3)
 }
 ```
+
 Output
+
 ```
 [1 2 3]
 [4 5 6 7 8]
@@ -75,9 +76,11 @@ Above we can see arr1 and arr2 are declared normally the only difference is that
 Arrays are copmparable we can compare array with `==` operator, this returns true if the data type and the length of the both array are same, it never compare the values within it.
 
 `len()` function provide by go is ued to get the length or the size of the array
+
 ```
 len(arr4) // 2
 ```
+
 **We can access all element based on its address**
 
 ```
@@ -91,7 +94,9 @@ func main() {
   fmt.Println(prices[2])  //30
 }
 ```
+
 **We can mutate any valid element in an array**
+
 ```
 package main
 import ("fmt")
@@ -116,9 +121,7 @@ matrix := [3][4]int{
 fmt.Println(matrix[1][2]) // Output: 7
 ```
 
-
 The only limitations in array is that they are of fixed size, in go there is a similar complex type with dynamic size and more features called slices so lets learn about that.
-
 
 ### Slices
 
@@ -129,14 +132,14 @@ Like arrays, slices are also used to store multiple values of the same type in a
 However, unlike arrays, the length of a slice can grow and shrink as you see fit.
 Slices are wapper around arrays, they manage the underlying arrays and make in more flexible and featureful.
 
-Like arrays all slices have length too witch determines the length of the slice (the number of elements stored) and there is another thing called capacity which the total capacity of elements that the array can grow or shrink 
+Like arrays all slices have length too witch determines the length of the slice (the number of elements stored) and there is another thing called capacity which the total capacity of elements that the array can grow or shrink
 (we will understand it better when we will know about how slices work)
 
 `cap()` function is used get the capacity of the array, for array the len and cap will be same. Whereas in slices it may or may not be same
 
 **Important**
 
-When we create a slices of certain length, the go compiler create the underlying array usually of double the length ( *for smaller slices and for larger grows by 25%. It is not exactly known how it work, but it create larger underlying array* ), When we reach the capacity of the slice, it creates another larger array copying all the data to the new array. **This functionality allows slices to have append function to add more value and keeping the array dynamic**
+When we create a slices of certain length, the go compiler create the underlying array usually of double the length ( _for smaller slices and for larger grows by 25%. It is not exactly known how it work, but it create larger underlying array_ ), When we reach the capacity of the slice, it creates another larger array copying all the data to the new array. **This functionality allows slices to have append function to add more value and keeping the array dynamic**
 
 `slice_name := []datatype{values}` This is the syntax of declaring slices, the brackets must be empty to signify slices
 
@@ -178,6 +181,7 @@ In the above exmaple we create an array of length 6 and we create a slice over i
 var myarray = [length]datatype{values} // An array
 myslice := myarray[start:end] // A slice made from the array
 ```
+
 Lets see more examples
 
 ```
@@ -210,9 +214,9 @@ s= append(s,5) //append new element 5 to slice s which returns the total updated
 
 s = append(s,4,5,6,7) // adds all the value in order to the slice s
 
-s= append(s,b...) // appending all elemets of slice b to slice a 
+s= append(s,b...) // appending all elemets of slice b to slice a
 ```
-*Slices in go are like pointer that points to the underlying array it holds the address of the array.* This the reason **Slices are not comparable and we can compare slices to nil only and nil is the zero value of a slice.**
+
+_Slices in go are like pointer that points to the underlying array it holds the address of the array._ This the reason **Slices are not comparable and we can compare slices to nil only and nil is the zero value of a slice.**
 
 There is a inbuilt function called `Equal` from slices package to compare two slices value by value.
-

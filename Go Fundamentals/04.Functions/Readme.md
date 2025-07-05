@@ -4,15 +4,13 @@
 
 A function is a reusable block of code designed to perform a specific task. Instead of writing the same code multiple times, you can define a function once and call it whenever needed. Functions improve code organization, readability, and maintainability by breaking down complex problems into smaller, manageable parts. Most programming languages, including Go, support functions as a core feature, enabling modular programming, logical separation of concerns, and easier debugging. Whether it’s performing a calculation, processing data, or handling user input, functions make your programs cleaner and more efficient.
 
-```     
-             Functions
-           |            | 
-Input ---> |    Code    | ---> Output
-           |            | 
-          
 ```
+             Functions
+           |            |
+Input ---> |    Code    | ---> Output
+           |            |
 
-
+```
 
 ### Declaring and Calling Functions
 
@@ -26,14 +24,15 @@ func Sum(a,b int) int {
 
 In the above code example we have declared a simple functions named Sum using th func keyword which returns sum of both input.
 
-``` 
+```
       Input arguments both of type int
          | |
 func Sum(a,b int) int {
   return a+b        |______ Return type (int)
-}                          
+}
 
 ```
+
 The two local variable a, b (for the function) are type of int which is expected while calling the function and that function return the sum of a and b which is also a int.
 
 **All the variable declared inside a function are its local variable which can be only used inside the function and the variable passed in the function recives the copy of the acutal variable, changes made on them dont affect the original variable**
@@ -83,6 +82,7 @@ In the above function we can see how basic functions are declared and called.
 **Returns**
 
 In go we have to capibility of returning multiple values.
+
 ```
 func divide(a, b int) (int, error) {
     if b == 0 {
@@ -91,6 +91,7 @@ func divide(a, b int) (int, error) {
     return a / b, nil
 }
 ```
+
 Here in this function divide we take in 2 int and intend to return int and error (error is a data type we will be discussing further), if the Divisor is 0 it will return the value as 0 and custom error called 'cannot divide by zero'. If divisor is valid we will return the answer and `nil`(data type means nothing).
 
 There is something called Named returns in go which is genarally not advised to use if the function is large, it is only best for small functions.
@@ -104,8 +105,6 @@ func rectangle(length, width int) (area int, perimeter int) {
 ```
 
 The above functions will return 2 int named area and perimeter which is declared in the function signature and inside the function we just use return keyword to return the variable mentioned in function signature.
-
-
 
 ### Variadic Parameters
 
@@ -149,9 +148,8 @@ func valid(msg string, nums ...int) {
 
 Functions in go are first class citizens, this means functions are treated like any other data we can assingn functions to variable, we can pass functions to another functions and even they can be returned in a function.
 
-
-
 **Function signature** is simple code snippet which gives brief information about the function without the code in it, Some of the example are listed below
+
 ```
 func sum(a,b int) int
 func(int,int) int
@@ -159,14 +157,13 @@ func printName(name string)
 func (string)
 ```
 
-
 ```
 func main(){
   fullname := func(s1,s2 string) string {
     return fmt.Sprintf("%s %s", s1, s2)
   }
 
-welcomestring := sayHello("code", "learned", fullname) 
+welcomestring := sayHello("code", "learned", fullname)
 
 fmt.Println(welcomestring)
 
@@ -264,7 +261,6 @@ func arithmeticOperation(op string) operation {
 
 ```
 
-
 ### Anonymous Functions and Closures
 
 [Youtube: Closure and Anonymous Function](https://www.youtube.com/watch?v=qndZOd-UwoA&list=PLq3etM-zISamTauFTO5-G5dqBN07ckzTk&index=38)
@@ -276,6 +272,7 @@ Clousers are functions that closes over values and it captures the value from it
 A closed value can be used or updated without affecting the other clouser value, it is independent and it it generaly used for creating memorizatio functions, implementing callbacks etc.
 
 Lets see a basic example
+
 ```
 package main
 
@@ -302,13 +299,13 @@ func main() {
 In the above code we have a `outer` function which returns a function which increases the value of local variable `x` by 1.
 Even afte outer function is done, its local variable x stays alive. Everytime we we use `counter` it prints the value of x
 
-
 **Anonymous Functions**
 
 An anonymous function is a function without a name. You can define and use it immediately, or assign it to a variable.
 It is generally useful for defining small piece of functionality inline without the need to give a name. Mostly used in callbacks
 
 Example:
+
 ```
 package main
 

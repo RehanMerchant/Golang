@@ -34,7 +34,7 @@ func main() {
 
     if age >= 18 { //false
         fmt.Println("You are an adult.") // dont print
-    } 
+    }
 }
 ```
 
@@ -42,7 +42,7 @@ Here in the above example we define if statement with `if` keyword and check wea
 
 **Else**
 
-Else is just an extention of if statement, 
+Else is just an extention of if statement,
 We can use the `else` statement to execute a different block of code when the condition in the `if` statement is false:
 
 ```
@@ -73,7 +73,7 @@ import "fmt"
 func main() {
     num := 13
 
-    if num == 10 { 
+    if num == 10 {
         fmt.Println("10")
     } else if num == 11 {
         fmt.Println("11")
@@ -85,9 +85,10 @@ func main() {
 }
 ```
 
-All if, if-else, if-else-if statment have a scope thing declared under the scope cna only be used inside it. 
+All if, if-else, if-else-if statment have a scope thing declared under the scope cna only be used inside it.
 
 There is a short variable declaration with if which declared as well as checks, and the variable can only be used insde the if and its chained if-else block.
+
 ```
 if variable := expression; condition {
     // use variable
@@ -97,6 +98,7 @@ if variable := expression; condition {
 ```
 
 **Example:**
+
 ```
 age:=19
 if even := isEven(age); even {
@@ -106,9 +108,8 @@ if even := isEven(age); even {
 
 Here in the above example isEven is a function that take in a number(int) and return true or false based on it nature, so in the even variable false is stored as 19 is not even after semicolon we check the condition which is false and will not exectes the block of code.
 
-
-
 If statements can be nested too for multiple conditions check and it also follows scope policy the variable declared inside the nested if can be used inside that block, but the variable declared in the parent if can be used in nested if, its like global variable for the nested if.
+
 ```
 num := 10
 if num > 0 {
@@ -120,13 +121,14 @@ if num > 0 {
 }
 ```
 
-### Switch 
+### Switch
 
 [Youtube: Switch](https://www.youtube.com/watch?v=XkL6lEG8X7M&list=PLq3etM-zISamTauFTO5-G5dqBN07ckzTk&index=34)
 
 The switch statement in Go is a multi-way branch that provides a clean alternative to long if-else-if chains. It allows you to match a value or condition against multiple cases, improving readability and efficiency.
 
 **Basic Syntax**
+
 ```
 switch expression {
 case value1:
@@ -138,8 +140,8 @@ default:
 }
 ```
 
-
 **Example:**
+
 ```
 day := "Monday"
 
@@ -171,6 +173,7 @@ default:
 ```
 
 We can declare a variable and use switch on it, In a single line and the variable declared can only be used in that switch block of code, here is an example:
+
 ```
 word:="Hello!"
 switch wordLen:=len(word); wordLen {
@@ -209,15 +212,18 @@ default:
     fmt.Println("Default")
 }
 ```
-*Use fallthrough carefully – it does not check the next case condition, it blindly executes the next block.*
+
+_Use fallthrough carefully – it does not check the next case condition, it blindly executes the next block._
 
 **Output:**
+
 ```
 Two
 Three
 Four
 Default
 ```
+
 Line wise Explanation:
 
 - Case 2 matched → prints "Two"
@@ -227,7 +233,6 @@ Line wise Explanation:
 
 - Then goes to default
 
-
 ### Loops
 
 [Resources: Blog](https://www.geeksforgeeks.org/go-language/loops-in-go-language/)
@@ -235,6 +240,7 @@ Line wise Explanation:
 Go language contains only a single loop that is for-loop. A for loop is a repetition control structure that allows us to write a loop that is executed a specific number of times. In go there are multiple ways for loop can be used to peform different task
 
 Thye basic syntax for `for loop` is very similar to other language.
+
 ```
 for initialization; condition; post{
        // statements....
@@ -244,26 +250,28 @@ for initialization; condition; post{
 Here the initialization statement is **optional**, it executes before the loop starts, the condition holds a boolean expression which is checked at every iteration, if the value is true the loop executes. The post statement generally changes the value based on which the condition chnage to false to exit the loop.
 
 ```
-// Go program to illustrate the  
-// use of simple for loop 
+// Go program to illustrate the
+// use of simple for loop
 package main
 
 import "fmt"
 
 // Main function
 func main() {
-    
-    // for loop 
-    // This loop starts when i = 0 
+
+    // for loop
+    // This loop starts when i = 0
     // executes till i<4 condition is true
     // post statement is i++
     for i := 0; i < 4; i++{
-      fmt.Printf("Hello World\n")  
+      fmt.Printf("Hello World\n")
     }
-  
+
 }
 ```
+
 For loop can be used as infinite loop in go, it will executes **infinitely**.
+
 ```
 for {
      // Statement...
@@ -271,8 +279,9 @@ for {
 ```
 
 **While loop** is not there in go unlike other programming language, but the concept of while is there which can be achived using for loop, here is an example
+
 ```
-// Go program to illustrate the  
+// Go program to illustrate the
 // the for loop as while Loop
 package main
 
@@ -280,15 +289,15 @@ import "fmt"
 
 // Main function
 func main() {
-    
+
     // while loop
-    // for loop executes till 
+    // for loop executes till
     // i < 3 condition is true
     i:= 0
     for i < 3 {
        i += 2
     }
-  fmt.Println(i) 
+  fmt.Println(i)
 }
 ```
 
@@ -298,30 +307,33 @@ In the above program `for` keyword is followed by only `condition` just like whi
 
 We can iterate through a loop until the condition is false, in this case we generally know about how many iterations we will have or the condition when will the loop stop.
 
-Lets think about how we used to iterate through a Array elemnts, we get the length of array, start the loop from 0 to the length and get the element using `arr[i]`. There are different complex data types like array,slices,maps (group of data stacked), we have the feature called `range` to loop through all the elements contained in it 
+Lets think about how we used to iterate through a Array elemnts, we get the length of array, start the loop from 0 to the length and get the element using `arr[i]`. There are different complex data types like array,slices,maps (group of data stacked), we have the feature called `range` to loop through all the elements contained in it
+
 ```
-// Go program to illustrate the  
-// use of simple range loop 
+// Go program to illustrate the
+// use of simple range loop
 package main
 
 import "fmt"
 
 // Main function
 func main() {
-    
+
     // Here rvariable is a array
-    rvariable:= []string{"GFG", "Geeks", "GeeksforGeeks"} 
-    
+    rvariable:= []string{"GFG", "Geeks", "GeeksforGeeks"}
+
     // i and j stores the value of rvariable
     // i store index number of individual string and
     // j store individual string of the given array
     for i, j := range rvariable {
-       fmt.Println(i, j) 
+       fmt.Println(i, j)
     }
-  
+
 }
 ```
+
 **Output:**
+
 ```
 0 GFG
 1 Geeks
@@ -335,7 +347,7 @@ There are other complex types we can loop through like Slices and Maps, we will 
 We can loop through a **string** in go as well because string are just continous array like structure (We will discuss it further) which will return index and the char in the from of rune (character).
 
 ```
-// Go program to illustrate the  
+// Go program to illustrate the
 // use for loop using string
 package main
 
@@ -343,12 +355,12 @@ import "fmt"
 
 // Main function
 func main() {
-    
+
     // String as a range in the for loop
     for i, j:= range "XabCd" {
-       fmt.Printf("The index number of %U is %d\n", j, i) 
+       fmt.Printf("The index number of %U is %d\n", j, i)
     }
-  
+
 }
 ```
 
@@ -369,7 +381,8 @@ for i := 1; i <= 10; i++ {
 	fmt.Println(i)
 }
 ```
-**Continue** 
+
+**Continue**
 
 - Skips the rest of the current iteration and goes to the next loop cycle.
 
@@ -411,6 +424,7 @@ func main() {
 ```
 
 **Output:**
+
 ```
 Executing: 1
 Deferred: 2
@@ -453,13 +467,15 @@ func main() {
     division(2, 8) // This line will not execute
 }
 ```
+
 **Output:**
+
 ```
 Result:  2
 panic: Cannot divide a number by zero
 ```
 
-Above is the example where we have a function which taked two int and return the queotient, but when it is divided by zero the program panics. It prints the result of first function call, the next function causes panic  and the next function call will not be exected.
+Above is the example where we have a function which taked two int and return the queotient, but when it is divided by zero the program panics. It prints the result of first function call, the next function causes panic and the next function call will not be exected.
 
 **Recover**
 
@@ -506,4 +522,3 @@ func main() {
 - defer: Use defer for cleanup tasks, such as closing files, releasing locks, or logging. It ensures that resources are properly managed, even if an error occurs.
 - panic: Use panic for unrecoverable errors, such as invalid input or system failures, where continuing execution would cause more harm.
 - recover: Use recover to handle panics gracefully, especially in long-running applications like servers, where crashing is not an option.
-

@@ -1,92 +1,92 @@
 # Golang
 
-Roadmap for Go 
+Roadmap for Go
 
 ## Go Fundamentals
 
-- [x]  [Introduction to Go](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/01.Introduction%20to%20Go#introduction-to-go)
-    - [x]  [The Origin Story](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/01.Introduction%20to%20Go#the-origin-story)
-    - [x]  [Design Goals](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/01.Introduction%20to%20Go#design-goals)
-    - [x]  [Why Go](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/01.Introduction%20to%20Go#why-go)
-    - [x]  [Installing Go and Setting up](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/01.Introduction%20to%20Go#installing-and-setting-up)
-- [x]  [Getting Started](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/02.Getting%20Started) 
-    - [x]  [Packages and Import](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/02.Getting%20Started#packages-and-imports)
-    - [x]  [Data Types](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/02.Getting%20Started#data-types)
-    - [x]  [Variables and Constanst](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/02.Getting%20Started#variable-and-constants)
-    - [x]  [Identifiers and Keyword](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/02.Getting%20Started#identifiers-and-keyword)
-    - [x]  [Operators](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/02.Getting%20Started#operator)
-- [x]  [Control Flow](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/03.Control%20Flow)
-    - [x]  [If/Else Statements](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/03.Control%20Flow#ifelse)
-    - [x]  [Switch Statements](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/03.Control%20Flow#switch)
-    - [x]  [Loops](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/03.Control%20Flow#loops)
-    - [x]  [Defer, Panic, Recover](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/03.Control%20Flow#defer-panic-and-recover)
-- [x]  [Functions](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/04.Functions)
-    - [x]  [Declaring and Calling Functions](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/04.Functions#declaring-and-calling-functions)
-    - [x]  [Variadic Parameters](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/04.Functions#variadic-parameters)
-    - [x]  [Understanding Functions](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/04.Functions#understanding-functions)
-    - [x]  [Anonymous Functions and Closures](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/04.Functions#anonymous-functions-and-closures)
-- [x]  [Complex  Types](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/05.Complex%20Types)
-    - [x]  [Arrays](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/05.Complex%20Types#arrays)
-    - [x]  [Slices](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/05.Complex%20Types#slices)
-    - [ ]  Maps
-    - [ ]  Structs
-- [ ]  Pointers & Memory
-    - [ ]  Basic Pointer Synta 
-    - [ ]  Pointers to Structs
-    - [ ]  Nil and Zero Values
-    - [ ]  Value vs Reference Types
-- [ ]  Methods & Receivers
-    - [ ]  Method Definition
-    - [ ]  Method on Structs
-    - [ ]  Method promotion
-    - [ ]  Constructor Patterns
-- [ ]  Interfaces
-    - [ ]   Basic Interface Definition
-    - [ ]   Implementing Interfaces implicitly
-    - [ ]   Type Assertions & Type Switches
-    - [ ]   Interface Composition
-    - [ ]   Empty Interface
-- [ ]  Packages and Modules
-    - [ ]  Organizing Code with Packages
-    - [ ]  Exported vs Une ported identifiers
-    - [ ]  Go Modules
-    - [ ]  Import Aliases and Dot Imports
-- [ ]  Error Handling
-    - [ ]  Returning error as a value
-    - [ ]   Custom Error Types
-    - [ ]  Wrapping errors with fmt.Errorf
-    - [ ]  errors.Is, errors.As
-    - [ ]  panic vs error vs recover
-- [ ]  Concurrency
-    - [ ]  Goroutines
-    - [ ]  Channels (unbuffered and buffered)
-    - [ ]   Channel Direction
-    - [ ]  Select Statements
-    - [ ]  WaitGroups
-    - [ ]  Mute  and Race Conditions
-- [ ]  Standard Library (Important Packages)
-    - [ ]  fmt, strings, strconv, time
-    - [ ]  math, math/rand, sort
-    - [ ]  io, io/ioutil, os, bufio
-    - [ ]  net/http (basic requests)
-    - [ ]  encoding/json, encoding/csv, encoding/ ml
-    - [ ]  conte t (important for managing goroutines)
-- [ ]  Testing in Go
-    - [ ]  Writing unit tests using testing package
-    - [ ]  Table-driven tests
-    - [ ]  Benchmarks
-    - [ ]  E ample tests
-    - [ ]  go test, go test -v, code coverage
-- [ ]  Tooling
-    - [ ]  go fmt, go vet
-    - [ ]  golint, staticcheck
-    - [ ]  go doc, go list, go mod
-    - [ ]  delve
-    - [ ]  race
-- [ ]  Advanced Topics
-    - [ ] Reflection (reflect package)
-    - [ ] Unsafe operations (via unsafe package)
-    - [ ] Memory layout and escape analysis
-    - [ ] Build constraints / tags
-    - [ ] Generics (Go 1.18+)
-    - [ ] Custom Collection Types (using Generics)
+- [x] [Introduction to Go](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/01.Introduction%20to%20Go#introduction-to-go)
+  - [x] [The Origin Story](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/01.Introduction%20to%20Go#the-origin-story)
+  - [x] [Design Goals](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/01.Introduction%20to%20Go#design-goals)
+  - [x] [Why Go](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/01.Introduction%20to%20Go#why-go)
+  - [x] [Installing Go and Setting up](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/01.Introduction%20to%20Go#installing-and-setting-up)
+- [x] [Getting Started](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/02.Getting%20Started)
+  - [x] [Packages and Import](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/02.Getting%20Started#packages-and-imports)
+  - [x] [Data Types](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/02.Getting%20Started#data-types)
+  - [x] [Variables and Constanst](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/02.Getting%20Started#variable-and-constants)
+  - [x] [Identifiers and Keyword](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/02.Getting%20Started#identifiers-and-keyword)
+  - [x] [Operators](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/02.Getting%20Started#operator)
+- [x] [Control Flow](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/03.Control%20Flow)
+  - [x] [If/Else Statements](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/03.Control%20Flow#ifelse)
+  - [x] [Switch Statements](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/03.Control%20Flow#switch)
+  - [x] [Loops](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/03.Control%20Flow#loops)
+  - [x] [Defer, Panic, Recover](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/03.Control%20Flow#defer-panic-and-recover)
+- [x] [Functions](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/04.Functions)
+  - [x] [Declaring and Calling Functions](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/04.Functions#declaring-and-calling-functions)
+  - [x] [Variadic Parameters](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/04.Functions#variadic-parameters)
+  - [x] [Understanding Functions](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/04.Functions#understanding-functions)
+  - [x] [Anonymous Functions and Closures](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/04.Functions#anonymous-functions-and-closures)
+- [x] [Complex Types](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/05.Complex%20Types)
+  - [x] [Arrays](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/05.Complex%20Types#arrays)
+  - [x] [Slices](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/05.Complex%20Types#slices)
+  - [ ] Maps
+  - [ ] Structs
+- [ ] Pointers & Memory
+  - [ ] Basic Pointer Synta
+  - [ ] Pointers to Structs
+  - [ ] Nil and Zero Values
+  - [ ] Value vs Reference Types
+- [ ] Methods & Receivers
+  - [ ] Method Definition
+  - [ ] Method on Structs
+  - [ ] Method promotion
+  - [ ] Constructor Patterns
+- [ ] Interfaces
+  - [ ] Basic Interface Definition
+  - [ ] Implementing Interfaces implicitly
+  - [ ] Type Assertions & Type Switches
+  - [ ] Interface Composition
+  - [ ] Empty Interface
+- [ ] Packages and Modules
+  - [ ] Organizing Code with Packages
+  - [ ] Exported vs Une ported identifiers
+  - [ ] Go Modules
+  - [ ] Import Aliases and Dot Imports
+- [ ] Error Handling
+  - [ ] Returning error as a value
+  - [ ] Custom Error Types
+  - [ ] Wrapping errors with fmt.Errorf
+  - [ ] errors.Is, errors.As
+  - [ ] panic vs error vs recover
+- [ ] Concurrency
+  - [ ] Goroutines
+  - [ ] Channels (unbuffered and buffered)
+  - [ ] Channel Direction
+  - [ ] Select Statements
+  - [ ] WaitGroups
+  - [ ] Mute and Race Conditions
+- [ ] Standard Library (Important Packages)
+  - [ ] fmt, strings, strconv, time
+  - [ ] math, math/rand, sort
+  - [ ] io, io/ioutil, os, bufio
+  - [ ] net/http (basic requests)
+  - [ ] encoding/json, encoding/csv, encoding/ ml
+  - [ ] conte t (important for managing goroutines)
+- [ ] Testing in Go
+  - [ ] Writing unit tests using testing package
+  - [ ] Table-driven tests
+  - [ ] Benchmarks
+  - [ ] E ample tests
+  - [ ] go test, go test -v, code coverage
+- [ ] Tooling
+  - [ ] go fmt, go vet
+  - [ ] golint, staticcheck
+  - [ ] go doc, go list, go mod
+  - [ ] delve
+  - [ ] race
+- [ ] Advanced Topics
+  - [ ] Reflection (reflect package)
+  - [ ] Unsafe operations (via unsafe package)
+  - [ ] Memory layout and escape analysis
+  - [ ] Build constraints / tags
+  - [ ] Generics (Go 1.18+)
+  - [ ] Custom Collection Types (using Generics)
