@@ -296,3 +296,48 @@ child := parent[1:3]
 fmt.Println("len(child):", len(child)) // 2
 fmt.Println("cap(child):", cap(child)) // 4
 ```
+
+### Strings Indepth
+
+[Youtube: Strings](https://www.youtube.com/watch?v=hi-KJn6d428&list=PLq3etM-zISamTauFTO5-G5dqBN07ckzTk&index=23)
+
+Strings are generally considered primitive data types in Go. However, in low-level languages like C which is close to Go in design, strings are not native types. Instead, we explicitly create a continuous array of characters to simulate a string. That’s why it's important to understand strings and their building blocks from a complex data type perspective, especially when working close to memory or performance.
+
+- Strings are stored as sequence of Bytes and each byte can be accesed by its index notation and the slice expression also works with string
+- In go strings are **immutable** once we create a string we can't change it
+- Strings are made up of rune and bytes which can be inter converted from each other
+
+```
+s:="hello world"
+string(s[0]) //"h"
+string(s[:5]) //"hello"
+string(s[:]) //"hello world"
+s[1] = 'a' // error, strings are immutable
+```
+In the above example we see `s` variable is a string and we try to extract each element like slices. `s[0]` returns a byte which is 104 ascii for h we use `string` function to convert any ascii, unicode number to its mapped value and afte that we use slices notation to get part of word and at last we see that string on created can't be changed
+
+- The byte data of string in assumed to be a UTF-8 encoded code point
+- UTF-8 encoding and Unicode support means, any character of a string in Go can take 1 to 4 Bytes of memory
+- if a code point takes more that 1 byte fetching byte data and using it directly can lead to unexpexted result for example s:="
+हिन्दी", each character size can be more that 1 byte, accessing it `string(s[1])` can lead to unexpcted result, here comes Rune representing charactes for all unicode. rune is alisa for int32
+
+Ways to get characters correctly
+
+```
+a := "हिन्दी"
+	r := []rune(a)
+  fmt.Println((r[0])) //2361
+	fmt.Println(string(r[0])) //ह
+```
+
+We can convert a string to a slice of rune and access each index to get the unicode number of the character and wrapping it around string to get the point value of the unicode number
+
+There are other inbuilt functions from utf-8, unicode library with lots of useful functions which can be used to work with rune values.
+
+**Strings are immutable can't be changed but we can reassign the variable to another string**
+```
+name:="rehna"
+name = "rajesh"
+```
+the block of character `rehan` will still be in memory it is not overwritter which will be managed by the garbage collector and the variable name will point to `rajesh` now
+
