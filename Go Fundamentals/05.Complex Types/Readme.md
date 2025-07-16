@@ -401,6 +401,8 @@ Empty maps can be created using general syntax as well as with make function and
 
 ### Structs
 
+Resources: [Youtube](https://www.youtube.com/watch?v=-ugst566gPo&list=PLq3etM-zISamTauFTO5-G5dqBN07ckzTk&index=27) , [Blog](https://www.geeksforgeeks.org/go-language/structures-in-golang/)
+
 Application require custom data types apart from Primitve and composite data type, Go offer **_structs_** which allows us to create a collection of members of different data types, into a single variable which togther act as a single data type.
 
 A struct is created with a `type` and `struct` keyword.
