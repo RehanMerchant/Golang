@@ -222,11 +222,10 @@ s= append(s,b...) // appending all elemets of slice b to slice a
 
 _Slices in go are like pointer that points to the underlying array it holds the address of the array._ This the reason **Slices are not comparable and we can compare slices to nil only and nil is the zero value of a slice.**
 
-
 There is a inbuilt function called `Equal` from slices package to compare two slices value by value.
 
-
 Nil and empty slice are different in go, lets demonstrate it.
+
 ```
 var a []int
 fmt.Println(a == nil) //true
@@ -244,7 +243,9 @@ b = append(b,200)
 fmt.Println(a)
 fmt.Println(b)
 ```
+
 Output
+
 ```
 [1 2 100 4 5 6 7 8]
 [100 4 5 6 7 8 200]
@@ -314,12 +315,13 @@ string(s[:5]) //"hello"
 string(s[:]) //"hello world"
 s[1] = 'a' // error, strings are immutable
 ```
+
 In the above example we see `s` variable is a string and we try to extract each element like slices. `s[0]` returns a byte which is 104 ascii for h we use `string` function to convert any ascii, unicode number to its mapped value and afte that we use slices notation to get part of word and at last we see that string on created can't be changed
 
 - The byte data of string in assumed to be a UTF-8 encoded code point
 - UTF-8 encoding and Unicode support means, any character of a string in Go can take 1 to 4 Bytes of memory
 - if a code point takes more that 1 byte fetching byte data and using it directly can lead to unexpexted result for example s:="
-हिन्दी", each character size can be more that 1 byte, accessing it `string(s[1])` can lead to unexpcted result, here comes Rune representing charactes for all unicode. rune is alisa for int32
+  हिन्दी", each character size can be more that 1 byte, accessing it `string(s[1])` can lead to unexpcted result, here comes Rune representing charactes for all unicode. rune is alisa for int32
 
 Ways to get characters correctly
 
@@ -335,15 +337,17 @@ We can convert a string to a slice of rune and access each index to get the unic
 There are other inbuilt functions from utf-8, unicode library with lots of useful functions which can be used to work with rune values.
 
 **Strings are immutable can't be changed but we can reassign the variable to another string**
+
 ```
 name:="rehna"
 name = "rajesh"
 ```
+
 the block of character `rehan` will still be in memory it is not overwritter which will be managed by the garbage collector and the variable name will point to `rajesh` now
 
 ### Maps
 
-Resources: [Youtube](https://www.youtube.com/watch?v=RwEjjIdtqaw&list=PLq3etM-zISamTauFTO5-G5dqBN07ckzTk&index=25) ,  [Blog](https://www.geeksforgeeks.org/go-language/golang-maps/)
+Resources: [Youtube](https://www.youtube.com/watch?v=RwEjjIdtqaw&list=PLq3etM-zISamTauFTO5-G5dqBN07ckzTk&index=25) , [Blog](https://www.geeksforgeeks.org/go-language/golang-maps/)
 
 In Go (Golang), a map is a powerful and versatile data structure that acts as a collection of unordered key-value pairs. Like Hashmap in other programming language.
 
@@ -363,14 +367,13 @@ func main() {
         "B": 25,
         "C": 35,
     }
-     
+
     ages["E"] = 33
-   
+
     fmt.Println("B's age:", ages["B"]) //25
     fmt.Println("E's age:", ages["E"])  //33
 }
 ```
-
 
 In the above code we declare a variable named ages which is a map which is declared using map keyword with a key of type string and a value of type int. We initilized the sample data there only `A->30` this means the `A` key points 30 value.
 
@@ -380,12 +383,14 @@ We can get the value using key `ages["A"]` it will return 30.
 - len function will return 0 for a nil map.
 - Map will reurn zero data type of the value type if key is not there.
 
-**Nil and Empty Maps** are two different Maps 
+**Nil and Empty Maps** are two different Maps
+
 ```
    var m map[string]int // m is a nil map
     n := map[string]int{}  // n is a empty map
 ```
-Empty maps can be created using general syntax as well as with make function  and nil map can be created using `var m map[string]int` and nil maps are not usable unlike empty map.
+
+Empty maps can be created using general syntax as well as with make function and nil map can be created using `var m map[string]int` and nil maps are not usable unlike empty map.
 
 **To check if a key exists in a map, you can use the following syntax:
 `value, exists := myMap[key]`**
@@ -394,3 +399,158 @@ Empty maps can be created using general syntax as well as with make function  an
 
 **If we initiate another value to the existing key it will override the value.**
 
+### Structs
+
+Application require custom data types apart from Primitve and composite data type, Go offer **_structs_** which allows us to create a collection of members of different data types, into a single variable which togther act as a single data type.
+
+A struct is created with a `type` and `struct` keyword.
+
+```
+type student struct {
+  firstname string
+  lastname string
+  age int
+  class []string
+}
+```
+
+In the above code we see that we create a custom type called student which contains first and last name and age and class a slice of string datatype.
+
+When we declare the our custom struct in code all the data such as name,age are initilized with the zero value of the respective types.
+`var rehan student` here in this snippet we are declaring a variable named rehan whose data type is student and student type contain first,last name, age and class as we declare all the values will be zero value.
+
+`rehan:=student{}` is another way to create a variable of type student
+
+Lets assign values to the variable rehan through implicit initialization
+
+```
+rehan:= student{
+ firstname: "sk"
+ lastname: "rehan"
+}
+
+------or------
+
+rehan:= student{
+  "sk"
+  "rehan"
+  19,
+  []string{"math","english"}
+}
+
+```
+For first case order of the fields does not matter and we can initilize only the field we want not nesseccery to have all fields,
+For second case we have to provide all values in the order of the structs and every field has to be filled in implicit initialization
+
+
+There is another way called explicit initilization, lets look through it
+
+```
+var rehan student
+rehan.firstname = "sk"
+rehan.class=[]string{"math","hindi"}
+```
+
+In the above example we saw how we can use the **dot** notation, which is used to read or write the fields of struct.
+
+`fmt.Println(rehan.firstname)` it will return `sk`
+
+**Anonymous Structs**
+
+Sometimes you don't need a named struct. You can define and use a struct on the fly
+
+```
+rehan := struct {
+    firstname string
+    age       int
+}{
+    firstname: "Rehan",
+    age:       20,
+}
+
+fmt.Println(rehan.firstname)  // Output: Rehan
+
+```
+
+Struct Embedding is feature in go which works like inheritance from other programming language. In go we can embeed a struct into another
+```
+type person struct {
+    name string
+    age  int
+}
+
+type student struct {
+    person         // Embedded struct
+    class []string
+}
+
+rehan := student{
+    person: person{name: "sk", age: 19},
+    class:  []string{"math", "science"},
+}
+
+fmt.Println(rehan.name) // Access directly from embedded struct
+
+```
+
+#### Pointers to a struct
+
+**Pointers in Go programming language or Golang is a variable which is used to store the memory address of another variable**, For effectively using struct in functions, methods, its better to use pointer for the structs. **We will cover Pointer in details ahead**
+
+```
+var x int = 10
+var p *int = &x // 'p' stores the address of 'x'
+
+```
+
+
+*Using Pointer with structs*
+
+Pointers are especially useful with structs, as passing structs directly copies the entire struct, which can be inefficient.
+
+```
+type student struct {
+  name string
+  age  int
+}
+
+func updateName(s student) {
+  s.name = "Updated"
+}
+
+rehan := student{"Rehan", 19}
+updateName(rehan)
+fmt.Println(rehan.name) // Output: Rehan (unchanged)
+
+```
+
+In the above example we create a function `updateName` which takes in a student struct `s` and update its name to `Updated`, Then we initlize a student typed variable `rehan` which has name as `Rehan` and age as `19` and we pass the student struct to updateName, On printing it prints `Updated`, but in updateName function it recives a copy of `rehan` so the changes are really reflected on the variable `rehan` of type student, therfore we have to use pointers.
+
+```
+func updateName(s *student) {
+  s.name = "Updated"
+}
+
+updateName(&rehan)
+fmt.Println(rehan.name) // Output: Updated
+```
+#### Comparing structs 
+
+```
+type student struct {
+  name string
+  age  int
+}
+
+s1 := student{"Rehan", 19}
+s2 := student{name: "Rajesh", age: 19}
+s3 := student{"Rehan", 19}
+
+fmt.Println(s1 == s3) // true
+fmt.Println(s1 == s2) // false
+```
+In the above example we see if all the fields in structs are comparable we can compare two variable of same type (struct) using `==`, If there is non-comparable types such as slice as fields in a structs then that will be a compile time error. All the data inside the fields must be same and comparable to get true. **There are lots of comparision functions we will discuss ahead**
+
+
+
+**Fundamental of Structs are done, but how it used, Structs design style an patterns, methods and structs metadata we will discuss ahead**

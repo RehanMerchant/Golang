@@ -29,8 +29,8 @@ Roadmap for Go
   - [x] [Arrays](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/05.Complex%20Types#arrays)
   - [x] [Slices](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/05.Complex%20Types#slices)
   - [x] [Strings Indepth](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/05.Complex%20Types#strings-indepth)
-  - [x] [Maps]()
-  - [ ] Structs
+  - [x] [Maps](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/05.Complex%20Types#maps)
+  - [x] [Structs](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/05.Complex%20Types#structs)
 - [ ] Pointers & Memory
   - [ ] Basic Pointer Synta
   - [ ] Pointers to Structs
