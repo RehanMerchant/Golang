@@ -341,3 +341,56 @@ name = "rajesh"
 ```
 the block of character `rehan` will still be in memory it is not overwritter which will be managed by the garbage collector and the variable name will point to `rajesh` now
 
+### Maps
+
+Resources: [Youtube](https://www.youtube.com/watch?v=RwEjjIdtqaw&list=PLq3etM-zISamTauFTO5-G5dqBN07ckzTk&index=25) ,  [Blog](https://www.geeksforgeeks.org/go-language/golang-maps/)
+
+In Go (Golang), a map is a powerful and versatile data structure that acts as a collection of unordered key-value pairs. Like Hashmap in other programming language.
+
+Maps have two important component Key and a Value. Key are unique and of **comparable types** such as int, float, rune, structs and pointers. Slice and non comparable structs cannot be used as keys and Each key can only appear once in map, Each key in Maps has a value linked to it. The value can be of any type incuding map, pointers or refrences types.
+
+- In maps there is no order of adding key and value, it is random.
+
+Examples
+
+```
+package main
+import "fmt"
+
+func main() {
+    ages := map[string]int{
+        "A": 30,
+        "B": 25,
+        "C": 35,
+    }
+     
+    ages["E"] = 33
+   
+    fmt.Println("B's age:", ages["B"]) //25
+    fmt.Println("E's age:", ages["E"])  //33
+}
+```
+
+
+In the above code we declare a variable named ages which is a map which is declared using map keyword with a key of type string and a value of type int. We initilized the sample data there only `A->30` this means the `A` key points 30 value.
+
+We can get the value using key `ages["A"]` it will return 30.
+
+- If a Map is declared but not initilized with a key and avalue it will marked as nil.
+- len function will return 0 for a nil map.
+- Map will reurn zero data type of the value type if key is not there.
+
+**Nil and Empty Maps** are two different Maps 
+```
+   var m map[string]int // m is a nil map
+    n := map[string]int{}  // n is a empty map
+```
+Empty maps can be created using general syntax as well as with make function  and nil map can be created using `var m map[string]int` and nil maps are not usable unlike empty map.
+
+**To check if a key exists in a map, you can use the following syntax:
+`value, exists := myMap[key]`**
+
+**For Deleting a key there is a built in function called delete which takes in map name as first argument and the key as second.**
+
+**If we initiate another value to the existing key it will override the value.**
+

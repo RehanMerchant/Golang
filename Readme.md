@@ -29,7 +29,7 @@ Roadmap for Go
   - [x] [Arrays](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/05.Complex%20Types#arrays)
   - [x] [Slices](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/05.Complex%20Types#slices)
   - [x] [Strings Indepth](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/05.Complex%20Types#strings-indepth)
-  - [ ] Maps
+  - [x] [Maps]()
   - [ ] Structs
 - [ ] Pointers & Memory
   - [ ] Basic Pointer Synta
