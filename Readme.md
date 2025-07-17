@@ -31,11 +31,9 @@ Roadmap for Go
   - [x] [Strings Indepth](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/05.Complex%20Types#strings-indepth)
   - [x] [Maps](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/05.Complex%20Types#maps)
   - [x] [Structs](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/05.Complex%20Types#structs)
-- [ ] Pointers & Memory
-  - [ ] Basic Pointer Synta
-  - [ ] Pointers to Structs
-  - [ ] Nil and Zero Values
-  - [ ] Value vs Reference Types
+- [x] Pointers & Memory ()
+  - [x] Pointers()
+  - [ ] Memory Management
 - [ ] Methods & Receivers
   - [ ] Method Definition
   - [ ] Method on Structs
