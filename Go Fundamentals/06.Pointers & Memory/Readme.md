@@ -9,5 +9,5 @@ Memory management is a crucial part of any programming language. It determines h
 
 So lets dive into understanding about pointers and further we will know about memory management which will be better understood after pointer.
  
-### Pointers
+### Pointers 
 
