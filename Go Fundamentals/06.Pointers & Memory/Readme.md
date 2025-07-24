@@ -8,6 +8,53 @@ In Go, understanding how memory works is essential to writing efficient and effe
 Memory management is a crucial part of any programming language. It determines how your program allocates, uses, and frees memory while it runs. In Go, memory management is automatic, thanks to the garbage collector, but understanding how it works helps you write more efficient and bug-free programs.
 
 So lets dive into understanding about pointers and further we will know about memory management which will be better understood after pointer.
+
+#### Pointers
  
-### Pointers 
+Pointer in golang is a variable that store a memory address of another variable, it is a special variable. It stores the address in hexadecimal format. **Why is Pointers necessary?**, Each variables we declare or intilize in the program get stored in **RAM** in a specific address. To remember all the memory addresses(Hexadecimal Format) manually is an overhead that's why we use variables to store data and variables can be accessed just by using their name. While pointers are raw addresses of a variable, with which we can work efficiently with memory, share data between function etc.
+
+- All pointers of any data type have the same size.
+- The zero value for a pointer variable is nil
+
+```
+                   -----------------------------------
+                   |  name        age        section |
+                   |---------------------------------|
+Variable Value --> |  rehan       19          "b02"  | 
+       Address --> |  0x18        0x2         0x22   |
+                   |                                 |
+                   -----------------------------------
+```
+
+In the above illustration we can see variable value `rehan` for variable `name` stored in `0x18` address. Likewise variabel age and section are there. Using the memory address we can directly manipulate the stored value efficiently
+
+**Pointer Operator**
+
+When an asterisk is used as prefix with a variable type, it signifies that it store a pointer, (*) Operator is also called as derefrencing opreator, it can be also used to retrive the value stored at the address pointed to by a pointer. The (&) operator used as a prefix to a variable gets its memory address.
+
+- Pointers cannot be created for constants or primitive literals.
+- Attempting to derefrence a nil pointer will result in runtime panic.
+
+Example
+```
+var pointertoInt *int
+var pointertoString *string
+var pointertoBool *bool
+
+age:=10
+pointertoInt = &age
+ageValue:= *pointertoInt
+```
+
+In the above example,In the first three line we declare pointer variable which will point to int,string and bool types respectively. The astrisk as prefix before the datatype indicates that the variable are pointer types. After that we create an age variable which stores 10 as the value in memory, after that we use the pointer variable `pointertoInt` to store the address of the `age` variable, Now we can derefrence the pointer to get te value stored in that address.
+
+
+- `var nameaddr *string`  num variable is a pointer that stores an address to a string data type value. Here we have only declared it, so it will have the zero value of pointer type (nil). On printing it will return nil.
+
+- `name:="rehan"` We create a string datatype variable.
+
+- `nameaddr = &name` here nameaddr store the address of the name variable.
+
+- `name2:= *nameaddr` here the name2 will store the value inside the address we derefrence.
+
 
