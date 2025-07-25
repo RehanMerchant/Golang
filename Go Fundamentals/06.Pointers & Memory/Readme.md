@@ -84,3 +84,12 @@ fmt.Println(a) //11
  }
  ```
  Now we pass the address of the variable `a` and derefrence it inside the increment function and increase the value, now it affects the same memory address that we print.
+
+ #### Memory Management
+
+ The process of allocationg, using and freeing memory during program execution efficiently such that the program functions fast and error free. (`malloc` and `free` are used in c/c++ to manage its own memory). But in go there is automatic memory management using garbage collector, reducing devloprt burden and preventing meomory leaks and dangling pointers, Unlike c/c++ where we have to manage all of it on our own.
+
+ There are two memory in go **Stack** and **Heap**, Each have specific purpose
+
+ **Stack**
+ 
