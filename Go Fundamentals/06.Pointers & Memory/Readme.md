@@ -92,4 +92,91 @@ fmt.Println(a) //11
  There are two memory in go **Stack** and **Heap**, Each have specific purpose
 
  **Stack**
- 
+
+ Stack memory are mainly used for storing function calls and local variables. It is fast and efficient and it frees the function as soon as it returns, the compiler decides which variable can be allocated in the stack.
+
+ Stack are LIFO(Last in First Out), where it returns the function which is recently added and each functions call creates a stack frame.
+
+Every time a function is called, a stack frame is created which includes:
+
+- Function parameters
+- Return address
+- Local variables
+- Return values
+
+```
+func add(x, y int) int {
+    sum := x + y     // x, y, sum → stack allocated
+    return sum
+}
+
+func main() {
+    result := add(2, 3) // result → stack allocated
+    fmt.Println(result)
+}
+
+```
+
+The variable `x`,`y`,`sum`,`result` are local which is allocated on the stack.
+
+**Heap**
+
+Heap dynamically allocate memory across function calls, It is not automatically freed when function returns, the Garbage collector detect and clean up the heap memory that is no longer in use.
+
+Unlike stack, heap outlive the function that created it. It is accessed via pointers and managed by garbage collector.
+
+Heap is generally slower than stack and allocation space is much higher than that of stack.
+
+Go generally allocates a variable to heap when:
+- A value escapes the current function
+- It is refrenced via a pointer that used outside the function scope
+- It is caputure by closure used later
+- When size is too big for stack
+
+**Escape Analysis: Deciding Stack vs Heap**
+
+Go uses escape analysis at compile-time to decide:
+
+- Stack allocation if variable stays within the function.
+
+- Heap allocation if variable "escapes" (i.e., used outside the function or returned as a pointer).
+
+Examples
+
+```
+func demo() {
+    n := 42         // Stored on the stack
+    fmt.Println(n)  // n doesn't escape
+}
+
+```
+
+Here in the above example the n declared and used inside the function that did't escape the function. So the vairiable `n` is stored in stack.
+
+```
+func demo() *int {
+    n := 42         // Stored on the heap
+    return &n       // n escapes the function
+}
+
+```
+
+Here, n is returned as a pointer, so Go moves n to the heap to make it accessible after demo() returns.
+
+
+```
+func counter() func() int {
+    x := 0
+    return func() int {
+        x++
+        return x
+    }
+}
+```
+
+x is accessed by the inner function after counter() returns → heap
+
+
+`new(Type)` Here new function is used to allocate memory of a particular type indicated inside the parnthesis.
+
+`make(Type, size)` It is used to allocate slice,maps,channels.
