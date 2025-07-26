@@ -123,7 +123,7 @@ The variable `x`,`y`,`sum`,`result` are local which is allocated on the stack.
 
 Heap dynamically allocate memory across function calls, It is not automatically freed when function returns, the Garbage collector detect and clean up the heap memory that is no longer in use.
 
-Unlike stack, heap outlive the function that created it. It is accessed via pointers and managed by garbage collector.
+Unlike stack, heap outlive the function that created it. It is accessed via pointers and managed by **garbage collector**.
 
 Heap is generally slower than stack and allocation space is much higher than that of stack.
 
