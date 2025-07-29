@@ -35,7 +35,7 @@ Roadmap for Go
 - [x] [Pointers & Memory](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/06.Pointers%20%26%20Memory)
   - [x] [Pointers](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/06.Pointers%20%26%20Memory#pointers)
   - [x] [Memory Management](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/06.Pointers%20%26%20Memory#memory-management)
-- [ ] Methods & Receivers
+- [x] [Methods & Receivers]()
   - [ ] Method Definition
   - [ ] Method on Structs
   - [ ] Method promotion
