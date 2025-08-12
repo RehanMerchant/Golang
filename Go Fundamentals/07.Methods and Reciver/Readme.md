@@ -7,3 +7,18 @@ In Go, methods are functions with a special receiver argument. They allow you to
 
 #### Methods
 
+Methods are functions that are associated and belong to a type.
+We can defile methods for both custom or derived types.
+
+``` 
+type Person struct {
+    Name string
+    Age int
+}
+
+func(p Person) getDetails() string {
+return fmt.Printf("Name: %s, Age: %d",p.Name,p.Age)
+}
+```
+Here in the above code function *getDetails* is associated to Person type which makes it a method.
+
