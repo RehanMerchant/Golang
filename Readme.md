@@ -37,7 +37,7 @@ Roadmap for Go
   - [x] [Memory Management](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/06.Pointers%20%26%20Memory#memory-management)
 - [x] [Methods & Receivers](https://github.com/RehanMerchant/Golang/blob/main/Go%20Fundamentals/07.Methods%20and%20Reciver)
   - [x] [Methods](https://github.com/RehanMerchant/Golang/blob/main/Go%20Fundamentals/07.Methods%20and%20Reciver/Readme.md#methods)
-  - [x] [Reciver Types](https://github.com/RehanMerchant/Golang/blob/main/Go%20Fundamentals/07.Methods%20and%20Reciver/Readme.md#methods)
+  - [x] [Reciver Types](https://github.com/RehanMerchant/Golang/blob/main/Go%20Fundamentals/07.Methods%20and%20Reciver/Readme.md#receiver-types)
 - [ ] Interfaces
   - [ ] Basic Interface Definition
   - [ ] Implementing Interfaces implicitly
