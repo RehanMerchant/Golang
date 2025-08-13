@@ -36,10 +36,8 @@ Roadmap for Go
   - [x] [Pointers](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/06.Pointers%20%26%20Memory#pointers)
   - [x] [Memory Management](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/06.Pointers%20%26%20Memory#memory-management)
 - [x] [Methods & Receivers]()
-  - [ ] Method Definition
-  - [ ] Method on Structs
-  - [ ] Method promotion
-  - [ ] Constructor Patterns
+  - [ ] [Methods]()
+  - [x] [Reciver Types]()
 - [ ] Interfaces
   - [ ] Basic Interface Definition
   - [ ] Implementing Interfaces implicitly
