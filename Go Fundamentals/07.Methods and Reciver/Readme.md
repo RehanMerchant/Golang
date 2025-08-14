@@ -53,7 +53,7 @@ In the above program Rect type have a function Area linked to it which returns t
 ```
 func(r *Rect) Area() float64{
     return r.Length * r.Width
-}
+} 
 ```
 The abover reciver type is called **Pointer Reciver** where we recive pointers and before that the example is called **Value Reciver**.
 
