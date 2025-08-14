@@ -38,12 +38,8 @@ Roadmap for Go
 - [x] [Methods & Receivers](https://github.com/RehanMerchant/Golang/blob/main/Go%20Fundamentals/07.Methods%20and%20Reciver)
   - [x] [Methods](https://github.com/RehanMerchant/Golang/blob/main/Go%20Fundamentals/07.Methods%20and%20Reciver/Readme.md#methods)
   - [x] [Receivers Types](https://github.com/RehanMerchant/Golang/blob/main/Go%20Fundamentals/07.Methods%20and%20Reciver/Readme.md#receiver-types)
-- [ ] Interfaces
-  - [ ] Basic Interface Definition
-  - [ ] Implementing Interfaces implicitly
-  - [ ] Type Assertions & Type Switches
-  - [ ] Interface Composition
-  - [ ] Empty Interface
+- [ ] [Interfaces]()
+  - [ ] [Interface]()
 - [ ] Packages and Modules
   - [ ] Organizing Code with Packages
   - [ ] Exported vs Une ported identifiers
