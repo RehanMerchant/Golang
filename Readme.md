@@ -40,7 +40,6 @@ Roadmap for Go
   - [x] [Receivers Types](https://github.com/RehanMerchant/Golang/blob/main/Go%20Fundamentals/07.Methods%20and%20Reciver/Readme.md#receiver-types)
 - [ ] [Interfaces](https://github.com/RehanMerchant/Golang/blob/main/Go%20Fundamentals/09.Interfaces/Readme.md)
   - [x] [Interface](https://github.com/RehanMerchant/Golang/blob/main/Go%20Fundamentals/09.Interfaces/Readme.md#interface)
-  - [x] [Empty interface]()
 - [ ] Packages and Modules
   - [ ] Organizing Code with Packages
   - [ ] Exported vs Une ported identifiers
