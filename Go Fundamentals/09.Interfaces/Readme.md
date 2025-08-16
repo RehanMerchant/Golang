@@ -58,4 +58,4 @@ func main(){
 }
 
 ```
-In the above example
+In the above example we create a interface called Shape which has a function signature called Area(), after that we declare two structs type called Rectangle and Circle which uses the Area function as reciver methods, that means the two structs types implemented the interface Shape. In main function we decalare two Rectangle and Circle types variable with their respective value and then created a slice of Shape(interface) that holds the the two declared variable(as they implement the Shape interface). After that we loop through shape slice printing the area of each shape.
