@@ -39,7 +39,8 @@ Roadmap for Go
   - [x] [Methods](https://github.com/RehanMerchant/Golang/blob/main/Go%20Fundamentals/07.Methods%20and%20Reciver/Readme.md#methods)
   - [x] [Receivers Types](https://github.com/RehanMerchant/Golang/blob/main/Go%20Fundamentals/07.Methods%20and%20Reciver/Readme.md#receiver-types)
 - [ ] [Interfaces](https://github.com/RehanMerchant/Golang/blob/main/Go%20Fundamentals/09.Interfaces/Readme.md)
-  - [ ] [Interface]()
+  - [x] [Interface](https://github.com/RehanMerchant/Golang/blob/main/Go%20Fundamentals/09.Interfaces/Readme.md#interface)
+  - [x] [Empty interface]()
 - [ ] Packages and Modules
   - [ ] Organizing Code with Packages
   - [ ] Exported vs Une ported identifiers
@@ -49,7 +50,7 @@ Roadmap for Go
   - [ ] Returning error as a value
   - [ ] Custom Error Types
   - [ ] Wrapping errors with fmt.Errorf
-  - [ ] errors.Is, errors.As
+  - [ ] errors Is, errors As
   - [ ] panic vs error vs recover
 - [ ] Concurrency
   - [ ] Goroutines
