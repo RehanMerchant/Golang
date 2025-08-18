@@ -80,3 +80,52 @@ func main() {
     describe(true)
 }
 ```
+
+#### Type Assertions & Switch
+
+There are times when you need to derive back the type from an empty interface. There are multiple methods of doing it, like using the reflection package, type assertion and type switch etc.
+
+**Type assertion**
+
+Type assertion is used to assert type for an empty interface.
+
+```
+func main(){
+    var emptyinterface any
+    emptyinterface = "Hello World!"
+
+    if str,ok:=emptyinterface.(string); ok {
+         fmt.Println("the value:", str)
+    }
+}
+```
+
+the above program will print the value:Hello World!, as it is a type of string. It is adviced to use the if check to provide a extra level of validation.
+
+**Tyee switch**
+
+Type switch can be used to check against multiple types and it is done in switch statement instead of switching values. Inside each case the value will of that type if the case matches, otherwise it remains empty.
+
+```
+func checkType(value interface{}) {
+    switch v:=value.(type){
+        case int:
+        fmt.Println("Int")
+        case string:
+        fmt.Println("String")
+        case float64:
+        fmt.Println("Decimal")
+        default:
+        fmt.Println("Unknown type")
+    }
+}
+
+func main() {
+    checkType(44) //int
+    checkType("Hello") //string
+    checkType(3.43) //decimal
+    checkType(true) //unknown type
+}
+```
+
+in the above program we create a `checkType` function which check `any` value and determine its type, if not found prints default statement. In main function we call the function and the output is beside it
