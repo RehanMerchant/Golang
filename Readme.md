@@ -47,7 +47,8 @@ Roadmap for Go
   - [ ] Go Modules
   - [ ] Import Aliases and Dot Imports
 - [x] [Error Handling]()
-  - [ ] [Handling errors]()
+  - [x] [Handling errors]()
+  - [x] [Sentinel and Wrapping Error]()
 - [ ] Concurrency
   - [ ] Goroutines
   - [ ] Channels (unbuffered and buffered)
