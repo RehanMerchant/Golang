@@ -128,4 +128,22 @@ func main() {
 }
 ```
 
-in the above program we create a `checkType` function which check `any` value and determine its type, if not found prints default statement. In main function we call the function and the output is beside it
+in the above program we create a `checkType` function which check `any` value and determine its type, if not found prints default statement. In main function we call the function and the output is beside it.
+
+
+Zero value of a interface is `nil`, the zero value of pointer is nil too but it is not same.
+
+
+```
+func main(){
+    var a *int
+    var i interface{}
+
+     fmt.Println(a==nil) //true
+     fmt.Println(i==nil) //true
+     i = a
+     fmt.Println(i==nil) //false
+
+}
+```
+We declare a int pointer `a` and empty interface `i` and we check that they are nil in the next two print statements. After that we assign `a` to `i` and then if we check `i` it shows false because **interfaces are nil when both type and value are nil** but here the type is not nil now as we assign it to a pointer int
