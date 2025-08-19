@@ -46,10 +46,10 @@ Roadmap for Go
   - [ ] Exported vs Une ported identifiers
   - [ ] Go Modules
   - [ ] Import Aliases and Dot Imports
-- [x] [Error Handling]()
-  - [x] [Handling errors]()
-  - [x] [Sentinel and Wrapping Error]()
-  - [x] [Comparing Errors]()
+- [x] [Error Handling](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/11.Error%20Handling)
+  - [x] [Handling errors](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/11.Error%20Handling#hadling-errors)
+  - [x] [Sentinel and Wrapping Error](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/11.Error%20Handling#sentinel-and-wrapping-error)
+  - [x] [Comparing Errors](https://github.com/RehanMerchant/Golang/tree/main/Go%20Fundamentals/11.Error%20Handling#comparing-errors)
 - [ ] Concurrency
   - [ ] Goroutines
   - [ ] Channels (unbuffered and buffered)
