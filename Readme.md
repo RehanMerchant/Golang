@@ -38,7 +38,7 @@ Roadmap for Go
 - [x] [Methods & Receivers](https://github.com/RehanMerchant/Golang/blob/main/Go%20Fundamentals/07.Methods%20and%20Reciver)
   - [x] [Methods](https://github.com/RehanMerchant/Golang/blob/main/Go%20Fundamentals/07.Methods%20and%20Reciver/Readme.md#methods)
   - [x] [Receivers Types](https://github.com/RehanMerchant/Golang/blob/main/Go%20Fundamentals/07.Methods%20and%20Reciver/Readme.md#receiver-types)
-- [ ] [Interfaces](https://github.com/RehanMerchant/Golang/blob/main/Go%20Fundamentals/09.Interfaces/Readme.md)
+- [x] [Interfaces](https://github.com/RehanMerchant/Golang/blob/main/Go%20Fundamentals/09.Interfaces/Readme.md)
   - [x] [Interface](https://github.com/RehanMerchant/Golang/blob/main/Go%20Fundamentals/09.Interfaces/Readme.md#interface)
   - [x] [Type Assertion and Switch](https://github.com/RehanMerchant/Golang/blob/main/Go%20Fundamentals/09.Interfaces/Readme.md#type-assertions--switch)
 - [ ] Packages and Modules
@@ -46,12 +46,8 @@ Roadmap for Go
   - [ ] Exported vs Une ported identifiers
   - [ ] Go Modules
   - [ ] Import Aliases and Dot Imports
-- [ ] Error Handling
-  - [ ] Returning error as a value
-  - [ ] Custom Error Types
-  - [ ] Wrapping errors with fmt.Errorf
-  - [ ] errors Is, errors As
-  - [ ] panic vs error vs recover
+- [x] [Error Handling]()
+  - [ ] [Handling errors]()
 - [ ] Concurrency
   - [ ] Goroutines
   - [ ] Channels (unbuffered and buffered)
