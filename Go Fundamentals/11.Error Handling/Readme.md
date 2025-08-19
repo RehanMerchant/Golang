@@ -199,3 +199,109 @@ func main() {
 }
 
 ```
+
+#### Comparing Errors
+
+There are mainly three ways we can compare errors in go
+
+- Direct Equality (==)
+
+Errors in Go are just values. You can compare them with == if they are the exact same value.
+
+```
+var ErrNotFound = errors.New("not found")
+
+func findItem(id int) error {
+    if id == 0 {
+        return ErrNotFound
+    }
+    return nil
+}
+
+func main() {
+    err := findItem(0)
+    if err == ErrNotFound {
+        fmt.Println("Item not found")
+    }
+}
+
+```
+
+only works for sentinel errors, fails when we wrap the error.
+
+- errors.Is
+
+Checks if an error is a target error, even if wrapped.
+
+```
+import (
+    "errors"
+    "fmt"
+)
+
+var ErrNotFound = errors.New("not found")
+
+func getUser() error {
+    return fmt.Errorf("db query failed: %w", ErrNotFound)
+}
+
+func main() {
+    err := getUser()
+    if errors.Is(err, ErrNotFound) {
+        fmt.Println("Handled: user not found")
+    }
+}
+
+```
+
+Use errors.Is for sentinel errors with wrapping support.
+
+- errors.As
+
+Checks if an error is of a specific type (or wraps one), and if so, assigns it to a variable.
+errors.As is used when you want to check if an error is of a certain type (not just value).
+It also extracts that error into a variable so you can use its fields.
+
+```
+package main
+
+import (
+    "errors"
+    "fmt"
+    "os"
+)
+
+func readFile() error {
+    _, err := os.Open("missing.txt")
+    return err
+}
+
+func main() {
+    err := readFile()
+
+    var pathErr *os.PathError
+    if errors.As(err, &pathErr) {
+        fmt.Println("A PathError happened!")
+        fmt.Println("Operation:", pathErr.Op)
+        fmt.Println("File Path:", pathErr.Path)
+        fmt.Println("Underlying error:", pathErr.Err)
+    } else {
+        fmt.Println("Some other error:", err)
+    }
+}
+
+```
+
+Output
+
+```
+A PathError happened!
+Operation: open
+File Path: missing.txt
+Underlying error: no such file or directory
+```
+
+- os.Open returns an *os.PathError (a struct with fields).
+- errors.As(err, &pathErr) → checks if err (or what it wraps) is of type *os.PathError.
+- If yes, Go assigns the actual error to pathErr.
+- Now you can inspect fields like .Op, .Path, .Err.

@@ -49,6 +49,7 @@ Roadmap for Go
 - [x] [Error Handling]()
   - [x] [Handling errors]()
   - [x] [Sentinel and Wrapping Error]()
+  - [x] [Comparing Errors]()
 - [ ] Concurrency
   - [ ] Goroutines
   - [ ] Channels (unbuffered and buffered)
